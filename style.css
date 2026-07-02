@@ -83,7 +83,7 @@ nav a.active{color:#79d620}
   min-height:calc(100vh - 78px);
   background:
     linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.5),rgba(0,0,0,.22)),
-    url("./home-bg.jpeg");;
+    url("home-bg.jpeg");;
   background-size:cover;
   background-position:center;
   padding:95px 6% 0;
