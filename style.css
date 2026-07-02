@@ -1,200 +1,290 @@
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  background:#06120a;
-  color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#06120a;
+    color:#fff;
 }
 
 .home-body{
-  min-height:100vh;
-  overflow-y:auto;
+    min-height:100vh;
+    overflow-x:hidden;
 }
 
+/* ========================= NAVBAR ========================= */
+
 .navbar{
-  width:100%;
-  height:78px;
-  padding:0 6%;
-  background:rgba(4,15,8,.94);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-  z-index:100;
+    width:100%;
+    height:82px;
+    padding:0 6%;
+    background:rgba(5,15,8,.95);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:999;
 }
 
 .logo-box{
-  height:78px;
-  width:170px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  flex-shrink:0;
+    display:flex;
+    align-items:center;
 }
 
 .logo-box img{
-  height:62px;
-  width:170px;
-  object-fit:contain;
-  display:block;
+    height:65px;
+    width:auto;
+    display:block;
 }
 
 nav{
-  display:flex;
-  gap:24px;
+    display:flex;
+    gap:28px;
 }
 
 nav a{
-  color:white;
-  text-decoration:none;
-  font-size:13px;
-  font-weight:900;
-  text-transform:uppercase;
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:800;
+    text-transform:uppercase;
+    transition:.25s;
 }
 
 nav a:hover,
-nav a.active{color:#79d620}
-
-.quote-btn,.main-btn{
-  background:linear-gradient(135deg,#8ee83e,#4fa51c);
-  color:white;
-  padding:15px 22px;
-  border-radius:7px;
-  text-decoration:none;
-  font-weight:900;
-  text-transform:uppercase;
-  white-space:nowrap;
+nav a.active{
+    color:#86dc2c;
 }
 
-.outline-btn{
-  color:white;
-  padding:13px 22px;
-  border-radius:7px;
-  border:2px solid white;
-  text-decoration:none;
-  font-weight:900;
-  text-transform:uppercase;
-  margin-left:10px;
+.quote-btn{
+    background:linear-gradient(135deg,#8fe53e,#56ae22);
+    color:white;
+    padding:15px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:900;
+    text-transform:uppercase;
 }
+
+/* ========================= HERO ========================= */
 
 .hero{
-  min-height:calc(100vh - 78px);
-  background:
-    linear-gradient(90deg,rgba(0,0,0,.75),rgba(0,0,0,.45),rgba(0,0,0,.2)),
-    url("/Los-Bros-Landscaping/home-bg.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  padding:95px 6% 0;
-  position:relative;
-  display:flex;
-  align-items:center;
+
+    min-height:100vh;
+
+    background-image:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.82),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.15)),
+    url("home-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 6% 120px;
+
+    position:relative;
 }
 
 .hero-content{
-  max-width:720px;
-  z-index:2;
-  padding-bottom:120px;
+    max-width:700px;
+    z-index:2;
 }
 
 .tagline{
-  font-size:18px;
-  font-weight:900;
-  text-transform:uppercase;
-  margin-bottom:18px;
+    font-size:20px;
+    font-weight:900;
+    margin-bottom:20px;
+    text-transform:uppercase;
 }
 
 .hero h1{
-  font-size:clamp(52px,7vw,90px);
-  line-height:.9;
-  text-transform:uppercase;
-  font-weight:1000;
+    font-size:88px;
+    line-height:.9;
+    font-weight:900;
+    text-transform:uppercase;
 }
 
 .hero h1 span{
-  display:block;
-  color:#79d620;
+    color:#86dc2c;
 }
 
 .hero-subtitle{
-  font-size:21px;
-  line-height:1.5;
-  margin:25px 0 35px;
-  max-width:560px;
+    margin:30px 0;
+    font-size:24px;
+    line-height:1.5;
+    max-width:600px;
 }
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-top:35px;
+}
+
+.main-btn{
+    background:#86dc2c;
+    color:white;
+    text-decoration:none;
+    padding:18px 30px;
+    border-radius:8px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+.outline-btn{
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    padding:16px 30px;
+    border-radius:8px;
+    font-weight:900;
+    text-transform:uppercase;
+}
+
+/* ========================= RIGHT BOX ========================= */
 
 .hero-card{
-  position:absolute;
-  right:6%;
-  top:32%;
-  background:rgba(5,20,10,.82);
-  padding:28px;
-  border-radius:12px;
-  display:grid;
-  gap:22px;
-  min-width:270px;
-  font-weight:900;
-  backdrop-filter:blur(8px);
+    position:absolute;
+    right:6%;
+    top:32%;
+
+    background:rgba(10,20,12,.82);
+
+    padding:28px;
+
+    border-radius:14px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:22px;
+
+    width:280px;
+
+    backdrop-filter:blur(10px);
+
+    font-size:20px;
+
+    font-weight:700;
 }
 
+/* ========================= BOTTOM BAR ========================= */
+
 .trust-bar{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  background:rgba(5,20,10,.94);
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-  padding:24px 6%;
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    background:rgba(5,18,10,.96);
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    padding:26px 6%;
+
+    gap:25px;
 }
 
 .trust-bar h3{
-  color:white;
-  font-size:17px;
+
+    font-size:20px;
+
+    margin-bottom:8px;
 }
 
 .trust-bar p{
-  color:#cfdccf;
-  margin-top:5px;
-  font-size:14px;
+
+    color:#d3d3d3;
+
+    font-size:15px;
+
+    line-height:1.4;
 }
 
-@media(max-width:900px){
-  .navbar{
-    height:auto;
-    padding:14px 5%;
-  }
+/* ========================= MOBILE ========================= */
 
-  nav{display:none}
+@media(max-width:950px){
 
-  .logo-box{
-    height:58px;
-    width:130px;
-  }
+.navbar{
 
-  .logo-box img{
-    height:54px;
-    width:130px;
-  }
+height:auto;
 
-  .quote-btn{
-    font-size:12px;
-    padding:12px 14px;
-  }
+padding:15px 5%;
+}
 
-  .hero{
-    min-height:100vh;
-    padding:80px 5% 40px;
-  }
+nav{
 
-  .hero-content{padding-bottom:40px}
+display:none;
+}
 
-  .hero-card,.trust-bar{display:none}
+.quote-btn{
 
-  .hero h1{font-size:48px}
+font-size:12px;
 
-  .hero-subtitle{font-size:18px}
+padding:12px 15px;
+}
+
+.logo-box img{
+
+height:55px;
+}
+
+.hero{
+
+padding:120px 5% 50px;
+}
+
+.hero h1{
+
+font-size:52px;
+}
+
+.hero-subtitle{
+
+font-size:18px;
+}
+
+.hero-card{
+
+display:none;
+}
+
+.trust-bar{
+
+display:none;
+}
+
+.hero-buttons{
+
+flex-direction:column;
+}
+
+.main-btn,
+
+.outline-btn{
+
+text-align:center;
+}
 }
