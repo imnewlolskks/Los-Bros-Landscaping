@@ -90,9 +90,7 @@ nav a:hover,nav a.active{color:#8cff1a}
   text-shadow:0 6px 28px rgba(0,0,0,.8);
 }
 
-.hero h1 span{
-  color:#8cff1a;
-}
+.hero h1 span{color:#8cff1a}
 
 .hero-subtitle{
   margin:30px 0;
@@ -119,21 +117,41 @@ nav a:hover,nav a.active{color:#8cff1a}
   background:rgba(0,0,0,.2);
 }
 
+/* GLASS BOX */
 .hero-card{
   position:absolute;
   right:6%;
-  top:34%;
-  background:rgba(4,18,9,.84);
-  padding:32px;
-  border-radius:22px;
+  top:32%;
+  width:345px;
+  padding:34px;
+
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:24px;
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
   display:flex;
   flex-direction:column;
-  gap:23px;
-  width:300px;
-  backdrop-filter:blur(12px);
-  font-size:20px;
-  font-weight:800;
-  box-shadow:0 20px 45px rgba(0,0,0,.35);
+  gap:22px;
+
+  font-size:21px;
+  font-weight:900;
+  color:white;
+
+  box-shadow:0 25px 55px rgba(0,0,0,.35);
+}
+
+.hero-card p{
+  text-shadow:0 3px 12px rgba(0,0,0,.8);
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.hero-card p:last-child{
+  border-bottom:none;
+  padding-bottom:0;
 }
 
 .trust-bar{
