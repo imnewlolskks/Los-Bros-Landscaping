@@ -62,7 +62,6 @@ nav a.active{
   background:rgba(255,255,255,.08);
 }
 
-/* GREEN GLASS BUTTONS */
 .quote-btn,
 .main-btn{
   background:linear-gradient(135deg,rgba(140,255,26,.55),rgba(70,150,20,.38));
@@ -143,7 +142,6 @@ nav a.active{
   margin-top:34px;
 }
 
-/* VIEW OUR WORK BUTTON */
 .outline-btn{
   border:2px solid rgba(255,255,255,.9);
   background:rgba(255,255,255,.10);
@@ -167,7 +165,6 @@ nav a.active{
     0 15px 30px rgba(0,0,0,.35);
 }
 
-/* GLASS CARD */
 .hero-card{
   position:absolute;
   right:6%;
@@ -241,33 +238,98 @@ nav a.active{
   line-height:1.35;
 }
 
+/* PHONE / TABLET FIX */
 @media(max-width:950px){
   .navbar{
-    height:auto;
-    padding:14px 5%;
+    height:82px;
+    padding:0 5%;
+  }
+
+  .logo-box img{
+    height:58px;
+    max-width:210px;
   }
 
   nav{display:none}
 
-  .logo-box img{height:250px}
-
   .quote-btn{
-    font-size:12px;
-    padding:12px 15px;
+    font-size:11px;
+    padding:11px 13px;
+    border-radius:10px;
   }
 
   .hero{
-    padding:120px 5% 60px;
-    background-position:center;
+    min-height:100vh;
+    align-items:center;
+    padding:115px 5% 55px;
+    background-position:center top;
   }
 
-  .hero h1{font-size:52px}
+  .hero-content{
+    max-width:100%;
+    padding-top:0;
+  }
 
-  .hero-subtitle{font-size:18px}
+  .tagline{
+    font-size:16px;
+    margin-bottom:16px;
+  }
 
-  .hero-card,.trust-bar{display:none}
+  .hero h1{
+    font-size:clamp(44px,14vw,60px);
+    line-height:.92;
+  }
 
-  .hero-buttons{flex-direction:column}
+  .hero-subtitle{
+    font-size:18px;
+    line-height:1.45;
+    margin:25px 0;
+    max-width:100%;
+  }
 
-  .main-btn,.outline-btn{text-align:center}
+  .hero-buttons{
+    flex-direction:column;
+    gap:15px;
+    margin-top:28px;
+  }
+
+  .main-btn,
+  .outline-btn{
+    width:100%;
+    text-align:center;
+    padding:17px 20px;
+  }
+
+  .hero-card,
+  .trust-bar{
+    display:none;
+  }
+}
+
+@media(max-width:430px){
+  .navbar{
+    height:78px;
+  }
+
+  .logo-box img{
+    height:52px;
+    max-width:185px;
+  }
+
+  .quote-btn{
+    font-size:10px;
+    padding:10px 11px;
+  }
+
+  .hero{
+    padding-top:105px;
+  }
+
+  .hero h1{
+    font-size:48px;
+  }
+
+  .hero-subtitle{
+    font-size:17px;
+  }
 }
