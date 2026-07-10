@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Services | Los Bros Landscaping</title>
-  <link rel="stylesheet" href="style.css?v=21" />
+
+  <!-- Change the version number after future CSS edits -->
+  <link rel="stylesheet" href="style.css?v=22" />
 </head>
 
 <body class="services-body">
 
 <header class="navbar">
   <a href="index.html" class="logo-box">
-    <img src="image-removebg-preview.png" alt="Los Bros Landscaping Logo">
+    <img
+      src="image-removebg-preview.png"
+      alt="Los Bros Landscaping Logo"
+    >
   </a>
 
   <nav>
@@ -23,146 +29,395 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <a class="quote-btn" href="contact.html">Get a Free Quote</a>
+  <a class="quote-btn" href="contact.html">
+    Get a Free Quote
+  </a>
 </header>
+
 
 <section class="services-hero">
   <div class="services-hero-text">
     <p class="tagline">Clean. Fair. Affordable.</p>
-    <h1>Our <span>Services</span></h1>
-    <p>Lawn care and landscaping services with clear starting prices.</p>
+
+    <h1>
+      Our <span>Services</span>
+    </h1>
+
+    <p>
+      Lawn care and landscaping services with clear starting prices.
+    </p>
+
+    <a class="services-hero-btn" href="contact.html">
+      Request a Free Quote
+    </a>
   </div>
 </section>
 
-<section class="services-page">
+
+<main class="services-page">
+
   <div class="section-title">
+    <p class="section-kicker">Los Bros Landscaping</p>
     <h2>What We Offer</h2>
-    <p>Choose a service and request a free quote.</p>
+
+    <p>
+      Choose the service you need and contact us for a free estimate.
+    </p>
   </div>
+
 
   <div class="service-grid">
 
-    <div class="service-card">
-      <img src="lawn.mowing" alt="Lawn mowing">
+    <!-- LAWN MOWING -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="lawn_mowing.jpg"
+          alt="Freshly mowed lawn"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Lawn Mowing</h3>
-        <p>Weekly, biweekly, edging, weed eating, and blowing.</p>
-        <strong>Starting at $50+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="cleanup_before_after.jpg" alt="Weed pulling">
+        <p>
+          Weekly or biweekly mowing with edging, weed eating, and blowing.
+        </p>
+
+        <strong class="service-price">
+          Starting at $50+
+        </strong>
+
+        <a
+          href="contact.html?service=Lawn-Mowing"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- WEED PULLING -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="cleanup_before_after.jpg"
+          alt="Weed pulling and flower bed cleanup"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Weed Pulling</h3>
-        <p>Hand removal of unwanted weeds from areas you want with hauling included.</p>
-        <strong>Starting at $40+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="bush_trimming.jpg" alt="Hedge trimming">
+        <p>
+          Hand removal of unwanted weeds from selected areas with hauling included.
+        </p>
+
+        <strong class="service-price">
+          Starting at $40+
+        </strong>
+
+        <a
+          href="contact.html?service=Weed-Pulling"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- HEDGE TRIMMING -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="bush_trimming.jpg"
+          alt="Trimmed bushes and hedges"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Hedge Trimming</h3>
-        <p>Small bushes, large bushes, shaping, and clean finish with hauling included.</p>
-        <strong>Starting at $20+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="home-bg.jpg" alt="Weed control">
+        <p>
+          Small or large bushes, shaping, cleanup, and hauling included.
+        </p>
+
+        <strong class="service-price">
+          Starting at $20+
+        </strong>
+
+        <a
+          href="contact.html?service=Hedge-Trimming"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- WEED CONTROL -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="home-bg.jpg"
+          alt="Lawn receiving weed-control service"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Weed Control</h3>
-        <p>Helps control weeds and keeps your yard looking better.</p>
-        <strong>Starting at $50+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="flower_bed_mulch.jpg" alt="Mulch installation">
+        <p>
+          Weed-control treatments that help keep your lawn healthier and cleaner.
+        </p>
+
+        <strong class="service-price">
+          Starting at $50+
+        </strong>
+
+        <a
+          href="contact.html?service=Weed-Control"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- MULCH INSTALLATION -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="flower_bed_mulch.jpg"
+          alt="Fresh mulch installed around landscaping"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Mulch Installation</h3>
-        <p>Fresh looking mulch that improves the look of your plants and protects your landscape.</p>
-        <strong>Starting at $60+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="yard_cleanup.jpg" alt="Yard cleanups">
+        <p>
+          Fresh mulch that improves your landscape and helps protect your plants.
+        </p>
+
+        <strong class="service-price">
+          Starting at $60+
+        </strong>
+
+        <a
+          href="contact.html?service=Mulch-Installation"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- YARD CLEANUPS -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="yard_cleanup.jpg"
+          alt="Before and after yard cleanup"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Yard Cleanups</h3>
-        <p>Leaves, branches, debris, trash, and overgrown yard cleanups.</p>
-        <strong>Starting at $40+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="weed_removal.jpg" alt="Plant installation">
+        <p>
+          Leaves, branches, debris, trash, and overgrown yard cleanup.
+        </p>
+
+        <strong class="service-price">
+          Starting at $40+
+        </strong>
+
+        <a
+          href="contact.html?service=Yard-Cleanup"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- PLANT INSTALLATION -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="weed_removal.jpg"
+          alt="Plants installed in a landscaped flower bed"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Plant Installation</h3>
-        <p>Flowers, shrubs, and more plants for your yard.</p>
-        <strong>Starting at $35+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="irrigation.jpg" alt="Irrigation systems">
+        <p>
+          Installation of flowers, shrubs, and other plants for your property.
+        </p>
+
+        <strong class="service-price">
+          Starting at $35+
+        </strong>
+
+        <a
+          href="contact.html?service=Plant-Installation"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- IRRIGATION SYSTEMS -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="irrigation.jpg"
+          alt="Irrigation and sprinkler system"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Irrigation Systems</h3>
-        <p>New irrigation systems, repairs, valves, controllers, and setup.</p>
-        <strong>Starting at $60+</strong>
-      </div>
-    </div>
 
-    <div class="service-card">
-      <img src="landscape_lighting.jpg" alt="Light installation">
+        <p>
+          New systems, repairs, sprinkler heads, valves, controllers, and setup.
+        </p>
+
+        <strong class="service-price">
+          Starting at $60+
+        </strong>
+
+        <a
+          href="contact.html?service=Irrigation-Systems"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
+      </div>
+    </article>
+
+
+    <!-- LIGHT INSTALLATION -->
+    <article class="service-card">
+      <div class="service-image">
+        <img
+          src="landscape_lighting.jpg"
+          alt="Landscape lighting installed around a home"
+          loading="lazy"
+        >
+      </div>
+
       <div class="service-info">
         <h3>Light Installation</h3>
-        <p>Outdoor lighting for walkways, gardens, homes, and yards.</p>
-        <strong>Starting at $120+</strong>
+
+        <p>
+          Outdoor lighting for walkways, gardens, homes, and landscaped areas.
+        </p>
+
+        <strong class="service-price">
+          Starting at $120+
+        </strong>
+
+        <a
+          href="contact.html?service=Light-Installation"
+          class="service-quote-btn"
+        >
+          Get a Free Quote
+        </a>
       </div>
-    </div>
+    </article>
 
   </div>
-</section>
+</main>
+
 
 <section class="proof-section">
-  <div>
+
+  <div class="before-after-section">
     <h2>Before & After</h2>
+
     <div class="before-after-box">
-      <img src="home-bg.jpg" alt="Before and after landscaping">
+      <img
+        src="home-bg.jpg"
+        alt="Before and after landscaping work"
+        loading="lazy"
+      >
+
       <span class="before-label">Before</span>
       <span class="after-label">After</span>
     </div>
   </div>
 
-  <div>
+
+  <div class="customer-section">
     <h2>What Our Customers Say</h2>
+
     <div class="review-card">
       <p class="stars">★★★★★</p>
-      <p>“The yard looked way better after the job. Fast, clean, and professional.”</p>
+
+      <p>
+        “The yard looked way better after the job. Fast, clean, and professional.”
+      </p>
+
       <strong>— Local Customer</strong>
-      <small>Gadsden, AL</small>
+      <small>Gadsden, Alabama</small>
     </div>
   </div>
+
 </section>
+
 
 <section class="footer-cta">
   <div>
-    <h2>Ready For A Better Yard You’ll Like?</h2>
-    <p>Let Los Bros Landscaping take care of the work so you can enjoy the after results.</p>
+    <h2>Ready for a Better-Looking Yard?</h2>
+
+    <p>
+      Let Los Bros Landscaping handle the work so you can enjoy the results.
+    </p>
   </div>
-  <a href="contact.html" class="main-btn">Get a Free Quote</a>
+
+  <a href="contact.html" class="main-btn">
+    Get a Free Quote
+  </a>
 </section>
 
+
 <footer class="site-footer">
-  <div>
-    <img src="image-removebg-preview.png" alt="Los Bros Landscaping Logo">
-    <p>High-quality landscaping services with attention to detail.</p>
+
+  <div class="footer-business">
+    <img
+      src="image-removebg-preview.png"
+      alt="Los Bros Landscaping Logo"
+    >
+
+    <p>
+      High-quality landscaping services with attention to detail.
+    </p>
   </div>
+
 
   <div>
     <h3>Quick Links</h3>
+
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
@@ -170,20 +425,27 @@
     <a href="contact.html">Contact</a>
   </div>
 
+
   <div>
     <h3>Services</h3>
+
     <p>Lawn Mowing</p>
     <p>Weed Pulling</p>
     <p>Hedge Trimming</p>
     <p>Yard Cleanups</p>
+    <p>Irrigation Systems</p>
+    <p>Light Installation</p>
   </div>
+
 
   <div>
     <h3>Contact</h3>
-    <p>Gadsden, AL</p>
+
+    <p>Gadsden, Alabama</p>
     <p>Free Estimates</p>
     <p>Fast & Reliable</p>
   </div>
+
 </footer>
 
 </body>
