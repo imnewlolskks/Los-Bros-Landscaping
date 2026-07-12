@@ -1,13 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>Gallery | Los Bros Landscaping</title>
 
-  <!-- Increase this number after future CSS updates -->
-  <link rel="stylesheet" href="style.css?v=23" />
+  <link rel="stylesheet" href="style.css?v=25">
+
+  <!-- GALLERY FIXES -->
+  <style>
+    /* Make sure the Gallery starts below the fixed navbar */
+    .gallery-body{
+      background:#06120a;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* Clean three-column computer grid */
+    .masonry-gallery{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:22px;
+      columns:unset !important;
+      column-gap:unset !important;
+      align-items:stretch;
+    }
+
+    .gallery-item{
+      width:100%;
+      min-width:0;
+      height:430px;
+      margin:0;
+
+      display:block;
+      break-inside:auto;
+
+      border-radius:18px;
+      overflow:hidden;
+
+      background:#dfe7da;
+
+      box-shadow:
+        0 14px 30px rgba(0,0,0,.13),
+        0 3px 8px rgba(0,0,0,.06);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        opacity .25s ease;
+    }
+
+    .gallery-item:hover{
+      transform:translateY(-5px);
+
+      box-shadow:
+        0 22px 45px rgba(0,0,0,.19),
+        0 5px 12px rgba(0,0,0,.08);
+    }
+
+    /* Used by the filter buttons */
+    .gallery-item.gallery-hidden{
+      display:none !important;
+    }
+
+    .gallery-photo{
+      position:relative;
+
+      width:100%;
+      height:100%;
+
+      display:block;
+
+      padding:0;
+      border:0;
+      background:none;
+
+      overflow:hidden;
+      cursor:pointer;
+      text-align:left;
+    }
+
+    .gallery-photo img,
+    .gallery-tall .gallery-photo img,
+    .gallery-wide .gallery-photo img{
+      width:100%;
+      height:100%;
+      min-height:0;
+
+      display:block;
+
+      object-fit:cover;
+      object-position:center;
+
+      transition:transform .45s ease;
+    }
+
+    .gallery-item:hover .gallery-photo img{
+      transform:scale(1.035);
+    }
+
+    /* Only the selected category stays green */
+    .gallery-filter.active{
+      color:white;
+      background:linear-gradient(135deg,#83db2d,#4f9e1e);
+      border-color:#72cc25;
+
+      box-shadow:
+        0 8px 20px rgba(64,130,20,.25),
+        0 0 16px rgba(140,255,26,.22);
+    }
+
+    .gallery-filter:not(.active):hover{
+      color:#4f9e1e;
+      border-color:#72cc25;
+      transform:translateY(-2px);
+    }
+
+    /* Tablet */
+    @media(max-width:950px){
+      .masonry-gallery{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:18px;
+      }
+
+      .gallery-item{
+        height:390px;
+      }
+    }
+
+    /* Phone */
+    @media(max-width:560px){
+      .masonry-gallery{
+        grid-template-columns:1fr;
+        gap:22px;
+      }
+
+      .gallery-item{
+        height:430px;
+        border-radius:16px;
+      }
+
+      .gallery-filters{
+        display:flex;
+        overflow-x:auto;
+        gap:9px;
+        padding-bottom:8px;
+        scrollbar-width:none;
+      }
+
+      .gallery-filters::-webkit-scrollbar{
+        display:none;
+      }
+
+      .gallery-filter{
+        flex-shrink:0;
+      }
+    }
+  </style>
 </head>
 
 <body class="gallery-body">
@@ -61,6 +215,7 @@
 
   <div class="gallery-heading">
     <p class="section-kicker">Los Bros Landscaping</p>
+
     <h2>Recent Projects</h2>
 
     <p>
@@ -71,45 +226,83 @@
 
   <!-- FILTER BUTTONS -->
   <div class="gallery-filters" aria-label="Gallery categories">
-    <button class="gallery-filter active" data-filter="all">
+
+    <button
+      class="gallery-filter active"
+      type="button"
+      data-filter="all"
+    >
       All
     </button>
 
-    <button class="gallery-filter" data-filter="mowing">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="mowing"
+    >
       Lawn Mowing
     </button>
 
-    <button class="gallery-filter" data-filter="trimming">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="trimming"
+    >
       Hedge Trimming
     </button>
 
-    <button class="gallery-filter" data-filter="weeds">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="weeds"
+    >
       Weed Pulling
     </button>
 
-    <button class="gallery-filter" data-filter="cleanup">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="cleanup"
+    >
       Yard Cleanups
     </button>
 
-    <button class="gallery-filter" data-filter="mulch">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="mulch"
+    >
       Mulch
     </button>
 
-    <button class="gallery-filter" data-filter="irrigation">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="irrigation"
+    >
       Irrigation
     </button>
 
-    <button class="gallery-filter" data-filter="lighting">
+    <button
+      class="gallery-filter"
+      type="button"
+      data-filter="lighting"
+    >
       Lighting
     </button>
+
   </div>
 
 
-  <!-- MASONRY GALLERY -->
+  <!-- GALLERY GRID -->
   <section class="masonry-gallery">
 
-    <!-- LAWN MOWING BEFORE & AFTER -->
-    <article class="gallery-item gallery-tall" data-category="mowing">
+
+    <!-- LAWN MOWING -->
+    <article
+      class="gallery-item"
+      data-category="mowing"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -122,20 +315,34 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Lawn Mowing</span>
-        <span class="gallery-before">Before</span>
-        <span class="gallery-after">After</span>
+        <span class="gallery-category">
+          Lawn Mowing
+        </span>
+
+        <span class="gallery-before">
+          Before
+        </span>
+
+        <span class="gallery-after">
+          After
+        </span>
 
         <div class="gallery-overlay">
           <h3>Lawn Mowing Transformation</h3>
-          <p>Mowing, edging, weed eating, and blowing.</p>
+
+          <p>
+            Mowing, edging, weed eating, and blowing.
+          </p>
         </div>
       </button>
     </article>
 
 
-    <!-- HEDGE TRIMMING BEFORE & AFTER -->
-    <article class="gallery-item" data-category="trimming">
+    <!-- HEDGE TRIMMING -->
+    <article
+      class="gallery-item"
+      data-category="trimming"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -148,20 +355,34 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Hedge Trimming</span>
-        <span class="gallery-before">Before</span>
-        <span class="gallery-after">After</span>
+        <span class="gallery-category">
+          Hedge Trimming
+        </span>
+
+        <span class="gallery-before">
+          Before
+        </span>
+
+        <span class="gallery-after">
+          After
+        </span>
 
         <div class="gallery-overlay">
           <h3>Clean Hedge Trimming</h3>
-          <p>Shaping, cleanup, and hauling included.</p>
+
+          <p>
+            Shaping, cleanup, and hauling included.
+          </p>
         </div>
       </button>
     </article>
 
 
-    <!-- WEED PULLING BEFORE & AFTER -->
-    <article class="gallery-item gallery-tall" data-category="weeds">
+    <!-- WEED PULLING -->
+    <article
+      class="gallery-item"
+      data-category="weeds"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -174,20 +395,34 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Weed Pulling</span>
-        <span class="gallery-before">Before</span>
-        <span class="gallery-after">After</span>
+        <span class="gallery-category">
+          Weed Pulling
+        </span>
+
+        <span class="gallery-before">
+          Before
+        </span>
+
+        <span class="gallery-after">
+          After
+        </span>
 
         <div class="gallery-overlay">
           <h3>Flower Bed Cleanup</h3>
-          <p>Hand-pulled weeds with hauling included.</p>
+
+          <p>
+            Hand-pulled weeds with hauling included.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- YARD CLEANUP -->
-    <article class="gallery-item" data-category="cleanup">
+    <article
+      class="gallery-item"
+      data-category="cleanup"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -200,20 +435,34 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Yard Cleanup</span>
-        <span class="gallery-before">Before</span>
-        <span class="gallery-after">After</span>
+        <span class="gallery-category">
+          Yard Cleanup
+        </span>
+
+        <span class="gallery-before">
+          Before
+        </span>
+
+        <span class="gallery-after">
+          After
+        </span>
 
         <div class="gallery-overlay">
           <h3>Full Yard Cleanup</h3>
-          <p>Leaves, debris, branches, and overgrowth removed.</p>
+
+          <p>
+            Leaves, debris, branches, and overgrowth removed.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- MULCH -->
-    <article class="gallery-item gallery-wide" data-category="mulch">
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -226,18 +475,26 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Mulch Installation</span>
+        <span class="gallery-category">
+          Mulch Installation
+        </span>
 
         <div class="gallery-overlay">
           <h3>Fresh Mulch Installation</h3>
-          <p>A cleaner, finished look for the flower beds.</p>
+
+          <p>
+            A cleaner, finished look for the flower beds.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- PLANT INSTALLATION -->
-    <article class="gallery-item" data-category="mulch">
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -250,18 +507,26 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Plant Installation</span>
+        <span class="gallery-category">
+          Plant Installation
+        </span>
 
         <div class="gallery-overlay">
           <h3>Plant Installation</h3>
-          <p>Flowers, shrubs, and decorative plants.</p>
+
+          <p>
+            Flowers, shrubs, and decorative plants.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- IRRIGATION -->
-    <article class="gallery-item gallery-tall" data-category="irrigation">
+    <article
+      class="gallery-item"
+      data-category="irrigation"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -274,18 +539,26 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Irrigation</span>
+        <span class="gallery-category">
+          Irrigation
+        </span>
 
         <div class="gallery-overlay">
           <h3>Irrigation System</h3>
-          <p>Sprinkler setup, repair, and testing.</p>
+
+          <p>
+            Sprinkler setup, repair, and testing.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- LIGHTING -->
-    <article class="gallery-item gallery-wide" data-category="lighting">
+    <article
+      class="gallery-item"
+      data-category="lighting"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -298,18 +571,26 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Landscape Lighting</span>
+        <span class="gallery-category">
+          Landscape Lighting
+        </span>
 
         <div class="gallery-overlay">
           <h3>Outdoor Lighting</h3>
-          <p>Lighting for the home, walkways, and landscape.</p>
+
+          <p>
+            Lighting for the home, walkways, and landscape.
+          </p>
         </div>
       </button>
     </article>
 
 
     <!-- EXTRA MOWING PROJECT -->
-    <article class="gallery-item" data-category="mowing">
+    <article
+      class="gallery-item"
+      data-category="mowing"
+    >
       <button
         class="gallery-photo"
         type="button"
@@ -322,11 +603,16 @@
           loading="lazy"
         >
 
-        <span class="gallery-category">Lawn Care</span>
+        <span class="gallery-category">
+          Lawn Care
+        </span>
 
         <div class="gallery-overlay">
           <h3>Finished Lawn</h3>
-          <p>Fresh mowing with a clean finish.</p>
+
+          <p>
+            Fresh mowing with a clean finish.
+          </p>
         </div>
       </button>
     </article>
@@ -335,8 +621,12 @@
 </main>
 
 
-<!-- LIGHTBOX -->
-<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+<!-- IMAGE LIGHTBOX -->
+<div
+  class="gallery-lightbox"
+  id="galleryLightbox"
+  aria-hidden="true"
+>
   <button
     class="lightbox-close"
     id="lightboxClose"
@@ -346,7 +636,11 @@
     ×
   </button>
 
-  <img id="lightboxImage" src="" alt="Expanded gallery project">
+  <img
+    id="lightboxImage"
+    src=""
+    alt="Expanded gallery project"
+  >
 </div>
 
 
@@ -366,7 +660,7 @@
 </section>
 
 
-<!-- QUICK LINKS FOOTER -->
+<!-- FOOTER -->
 <footer class="site-footer">
 
   <div class="footer-business">
@@ -412,7 +706,10 @@
     <p>Free Estimates</p>
     <p>Fast & Reliable</p>
 
-    <a class="footer-contact-btn" href="contact.html">
+    <a
+      class="footer-contact-btn"
+      href="contact.html"
+    >
       Request a Quote
     </a>
   </div>
@@ -420,7 +717,138 @@
 </footer>
 
 
-<script src="script.js?v=23"></script>
+<!-- GALLERY FILTER AND LIGHTBOX CODE -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons =
+      document.querySelectorAll(".gallery-filter");
+
+    const galleryItems =
+      document.querySelectorAll(".gallery-item");
+
+
+    /* CATEGORY FILTERS */
+    filterButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        const selectedCategory =
+          button.getAttribute("data-filter");
+
+        filterButtons.forEach(function (otherButton) {
+          otherButton.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        galleryItems.forEach(function (item) {
+          const itemCategory =
+            item.getAttribute("data-category");
+
+          const shouldShow =
+            selectedCategory === "all" ||
+            itemCategory === selectedCategory;
+
+          item.classList.toggle(
+            "gallery-hidden",
+            !shouldShow
+          );
+        });
+      });
+    });
+
+
+    /* IMAGE LIGHTBOX */
+    const lightbox =
+      document.getElementById("galleryLightbox");
+
+    const lightboxImage =
+      document.getElementById("lightboxImage");
+
+    const closeButton =
+      document.getElementById("lightboxClose");
+
+    const galleryPhotos =
+      document.querySelectorAll(".gallery-photo");
+
+
+    function openLightbox(photo) {
+      if (!lightbox || !lightboxImage) {
+        return;
+      }
+
+      const image = photo.querySelector("img");
+
+      const fullImage =
+        photo.getAttribute("data-full") ||
+        image?.getAttribute("src");
+
+      if (!fullImage) {
+        return;
+      }
+
+      lightboxImage.src = fullImage;
+
+      lightboxImage.alt =
+        image?.getAttribute("alt") ||
+        "Gallery project";
+
+      lightbox.classList.add("open");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+    }
+
+
+    function closeLightbox() {
+      if (!lightbox || !lightboxImage) {
+        return;
+      }
+
+      lightbox.classList.remove("open");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      lightboxImage.src = "";
+
+      document.body.style.overflow = "";
+    }
+
+
+    galleryPhotos.forEach(function (photo) {
+      photo.addEventListener("click", function () {
+        openLightbox(photo);
+      });
+    });
+
+
+    if (closeButton) {
+      closeButton.addEventListener(
+        "click",
+        closeLightbox
+      );
+    }
+
+
+    if (lightbox) {
+      lightbox.addEventListener(
+        "click",
+        function (event) {
+          if (event.target === lightbox) {
+            closeLightbox();
+          }
+        }
+      );
+    }
+
+
+    document.addEventListener(
+      "keydown",
+      function (event) {
+        if (event.key === "Escape") {
+          closeLightbox();
+        }
+      }
+    );
+  });
+</script>
 
 </body>
 </html>
