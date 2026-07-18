@@ -2296,3 +2296,158 @@ nav a.active{
     line-height:1.25;
   }
 }
+/* =========================================================
+   JULY 17 GALLERY AND REVIEW UPDATES
+========================================================= */
+
+
+/* MORE SPACE BETWEEN GALLERY PHOTOS ON COMPUTER */
+
+.masonry-gallery{
+  display:grid !important;
+  grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+  gap:38px 32px !important;
+
+  columns:unset !important;
+  column-gap:unset !important;
+
+  align-items:stretch;
+}
+
+.gallery-item{
+  width:100% !important;
+  height:430px !important;
+  margin:0 !important;
+
+  display:block !important;
+  break-inside:auto !important;
+}
+
+.gallery-photo{
+  width:100%;
+  height:100%;
+}
+
+.gallery-photo img,
+.gallery-tall .gallery-photo img,
+.gallery-wide .gallery-photo img{
+  width:100%;
+  height:100%;
+
+  min-height:0;
+
+  object-fit:cover;
+  object-position:center;
+}
+
+
+/* GALLERY NOW ONLY SHOWS PROJECT TITLE */
+
+.gallery-overlay{
+  padding:70px 20px 20px;
+}
+
+.gallery-overlay h3{
+  margin-bottom:0;
+  font-size:23px;
+}
+
+.gallery-overlay p{
+  display:none !important;
+}
+
+
+/* HIDE OLD BEFORE AND AFTER LABELS */
+
+.gallery-before,
+.gallery-after{
+  display:none !important;
+}
+
+
+/* KEEP NON-SELECTED FILTERS WHITE */
+
+.gallery-filter:not(.active){
+  color:#263226;
+  background:#fff;
+}
+
+
+/* HIDE FILTERED PROJECTS */
+
+.gallery-item.gallery-hidden{
+  display:none !important;
+}
+
+
+/* REVIEW CTA TAKES FULL WIDTH */
+
+.reviews-leave-wide{
+  grid-column:1 / -1;
+
+  min-height:230px;
+
+  padding:35px;
+}
+
+
+/* REMOVE TRUST STRIP EVEN IF OLD HTML IS CACHED */
+
+.reviews-trust-strip{
+  display:none !important;
+}
+
+
+/* TABLETS */
+
+@media(max-width:950px){
+
+  .masonry-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:26px 22px !important;
+  }
+
+  .gallery-item{
+    height:390px !important;
+  }
+
+  .reviews-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .reviews-leave-wide{
+    grid-column:1 / -1;
+  }
+}
+
+
+/* PHONES */
+
+@media(max-width:560px){
+
+  .masonry-gallery{
+    grid-template-columns:1fr !important;
+    gap:25px !important;
+  }
+
+  .gallery-item{
+    height:420px !important;
+  }
+
+  .gallery-overlay{
+    padding:60px 18px 18px;
+  }
+
+  .gallery-overlay h3{
+    font-size:21px;
+  }
+
+  .reviews-grid{
+    grid-template-columns:1fr;
+  }
+
+  .reviews-leave-wide{
+    grid-column:auto;
+    min-height:280px;
+  }
+}
