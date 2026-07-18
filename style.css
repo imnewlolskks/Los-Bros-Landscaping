@@ -2451,3 +2451,931 @@ nav a.active{
     min-height:280px;
   }
 }
+/* =========================================================
+   SERVICE AREAS PAGE
+========================================================= */
+
+.areas-body{
+  background:#06120a;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+
+/* SERVICE AREA HERO */
+
+.areas-hero{
+  min-height:58vh;
+
+  display:flex;
+  align-items:center;
+
+  padding:150px 6% 72px;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.52),
+      rgba(0,0,0,.17)
+    ),
+    url("home-bg.jpg");
+
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+
+.areas-hero-content{
+  width:100%;
+  max-width:800px;
+}
+
+.areas-hero h1{
+  max-width:900px;
+
+  color:#fff;
+  font-size:clamp(56px,7.5vw,100px);
+  line-height:.9;
+  font-weight:1000;
+
+  text-transform:uppercase;
+  text-shadow:0 8px 34px rgba(0,0,0,.88);
+}
+
+.areas-hero h1 span{
+  color:#8cff1a;
+}
+
+.areas-hero-content > p:last-of-type{
+  max-width:660px;
+
+  margin:22px 0 31px;
+
+  color:#fff;
+  font-size:21px;
+  line-height:1.5;
+
+  text-shadow:0 4px 18px rgba(0,0,0,.88);
+}
+
+.areas-hero-btn{
+  min-height:56px;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:15px 25px;
+
+  color:#fff;
+  background:linear-gradient(
+    135deg,
+    #8ae938,
+    #4d9d1d
+  );
+
+  border:2px solid #8cff1a;
+  border-radius:12px;
+
+  text-decoration:none;
+  text-transform:uppercase;
+  font-weight:900;
+
+  box-shadow:
+    0 0 25px rgba(140,255,26,.35),
+    0 14px 30px rgba(0,0,0,.35);
+
+  transition:.25s ease;
+}
+
+.areas-hero-btn:hover{
+  transform:translateY(-3px) scale(1.04);
+
+  box-shadow:
+    0 0 38px rgba(140,255,26,.62),
+    0 18px 38px rgba(0,0,0,.42);
+}
+
+
+/* MAP PAGE */
+
+.areas-page{
+  padding:76px 6% 90px;
+
+  color:#101810;
+  background:#f7f8f4;
+}
+
+.areas-heading{
+  width:100%;
+  max-width:820px;
+
+  margin-bottom:35px;
+}
+
+.areas-heading h2{
+  color:#101810;
+
+  font-size:clamp(34px,4.5vw,52px);
+  line-height:1.05;
+
+  text-transform:uppercase;
+}
+
+.areas-heading > p:last-child{
+  margin-top:12px;
+
+  color:#536153;
+  font-size:17px;
+  line-height:1.55;
+}
+
+
+/* TWO-COLUMN MAP LAYOUT */
+
+.areas-map-layout{
+  width:100%;
+  max-width:1450px;
+
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns:minmax(310px,.75fr) minmax(0,1.55fr);
+  gap:28px;
+
+  align-items:stretch;
+}
+
+
+/* ADDRESS CHECKER */
+
+.area-checker-card{
+  position:relative;
+
+  padding:31px;
+
+  color:#fff;
+  background:
+    linear-gradient(
+      145deg,
+      #0e3318,
+      #06160b
+    );
+
+  border:1px solid rgba(140,255,26,.23);
+  border-radius:21px;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.20),
+    inset 0 1px 1px rgba(255,255,255,.08);
+}
+
+.area-checker-number{
+  width:42px;
+  height:42px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:18px;
+
+  color:#17320f;
+  background:#8cff1a;
+
+  border-radius:50%;
+
+  font-size:18px;
+  font-weight:900;
+
+  box-shadow:0 0 22px rgba(140,255,26,.30);
+}
+
+.area-checker-card h3{
+  font-size:28px;
+  line-height:1.1;
+  text-transform:uppercase;
+}
+
+.area-checker-card > p{
+  margin-top:12px;
+
+  color:#d2dfcf;
+  font-size:15px;
+  line-height:1.55;
+}
+
+
+/* ADDRESS FORM */
+
+.area-search-form{
+  margin-top:25px;
+}
+
+.area-search-form label{
+  display:block;
+
+  margin-bottom:9px;
+
+  color:#fff;
+  font-size:14px;
+  font-weight:800;
+}
+
+.area-search-row{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:9px;
+}
+
+.area-search-row input{
+  width:100%;
+  min-width:0;
+  min-height:52px;
+
+  padding:13px 15px;
+
+  color:#fff;
+  background:rgba(255,255,255,.09);
+
+  border:1px solid rgba(255,255,255,.21);
+  border-radius:10px;
+
+  outline:none;
+
+  font-family:inherit;
+  font-size:14px;
+}
+
+.area-search-row input::placeholder{
+  color:#aebcab;
+}
+
+.area-search-row input:focus{
+  border-color:#8cff1a;
+
+  box-shadow:0 0 0 3px rgba(140,255,26,.13);
+}
+
+.area-search-row button{
+  min-height:52px;
+
+  padding:12px 18px;
+
+  color:#fff;
+  background:linear-gradient(
+    135deg,
+    #84dd2d,
+    #4b971b
+  );
+
+  border:1px solid #8cff1a;
+  border-radius:10px;
+
+  cursor:pointer;
+
+  font-family:inherit;
+  font-weight:900;
+  text-transform:uppercase;
+
+  transition:.22s ease;
+}
+
+.area-search-row button:hover{
+  transform:translateY(-2px);
+
+  box-shadow:0 0 22px rgba(140,255,26,.42);
+}
+
+
+/* ADDRESS RESULT */
+
+.area-result{
+  min-height:92px;
+
+  display:flex;
+  align-items:center;
+  gap:13px;
+
+  margin-top:18px;
+  padding:16px;
+
+  background:rgba(255,255,255,.07);
+
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:12px;
+}
+
+.area-result-icon{
+  width:39px;
+  height:39px;
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+  background:rgba(140,255,26,.18);
+
+  border-radius:50%;
+
+  font-size:19px;
+  font-weight:900;
+}
+
+.area-result strong{
+  display:block;
+
+  color:#fff;
+  font-size:15px;
+}
+
+.area-result p{
+  margin-top:5px;
+
+  color:#cbd7c8;
+  font-size:13px;
+  line-height:1.4;
+}
+
+.area-result-inside{
+  background:rgba(102,201,37,.15);
+  border-color:rgba(140,255,26,.55);
+}
+
+.area-result-inside .area-result-icon{
+  color:#14250e;
+  background:#8cff1a;
+}
+
+.area-result-outside{
+  background:rgba(255,174,45,.12);
+  border-color:rgba(255,189,75,.45);
+}
+
+.area-result-outside .area-result-icon{
+  color:#241a06;
+  background:#ffbd4b;
+}
+
+.area-result-loading{
+  border-color:rgba(140,255,26,.35);
+}
+
+.area-result-quote{
+  width:100%;
+  min-height:52px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:13px;
+  padding:13px 17px;
+
+  color:#fff;
+  background:linear-gradient(
+    135deg,
+    #82db2c,
+    #4d9c1d
+  );
+
+  border:2px solid #76d423;
+  border-radius:10px;
+
+  text-align:center;
+  text-decoration:none;
+  text-transform:uppercase;
+
+  font-size:14px;
+  font-weight:900;
+
+  box-shadow:0 8px 20px rgba(67,139,22,.25);
+
+  transition:.22s ease;
+}
+
+.area-result-quote:hover{
+  transform:translateY(-2px);
+
+  box-shadow:0 0 24px rgba(140,255,26,.48);
+}
+
+
+/* HOW IT WORKS */
+
+.map-directions{
+  margin-top:27px;
+  padding-top:23px;
+
+  border-top:1px solid rgba(255,255,255,.14);
+}
+
+.map-directions h4{
+  margin-bottom:15px;
+
+  font-size:16px;
+  text-transform:uppercase;
+}
+
+.map-directions > div{
+  display:flex;
+  align-items:center;
+  gap:11px;
+
+  margin-bottom:12px;
+}
+
+.map-directions span{
+  width:27px;
+  height:27px;
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#17320f;
+  background:#8cff1a;
+
+  border-radius:50%;
+
+  font-size:12px;
+  font-weight:900;
+}
+
+.map-directions p{
+  color:#d2dfcf;
+  font-size:14px;
+  line-height:1.4;
+}
+
+
+/* INTERACTIVE MAP CARD */
+
+.interactive-map-card{
+  min-width:0;
+
+  display:flex;
+  flex-direction:column;
+
+  overflow:hidden;
+
+  background:#fff;
+  border:1px solid rgba(30,70,30,.10);
+  border-radius:21px;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.14),
+    0 3px 9px rgba(0,0,0,.05);
+}
+
+.map-card-top{
+  min-height:90px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+
+  padding:20px 23px;
+}
+
+.map-small-title{
+  color:#56a423;
+
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1px;
+
+  text-transform:uppercase;
+}
+
+.map-card-top h3{
+  margin-top:5px;
+
+  color:#101810;
+  font-size:24px;
+  line-height:1.15;
+}
+
+.reset-map-btn{
+  flex-shrink:0;
+
+  padding:10px 14px;
+
+  color:#356b16;
+  background:#eef6e9;
+
+  border:1px solid rgba(73,144,29,.22);
+  border-radius:9px;
+
+  cursor:pointer;
+
+  font-family:inherit;
+  font-size:12px;
+  font-weight:900;
+  text-transform:uppercase;
+
+  transition:.2s ease;
+}
+
+.reset-map-btn:hover{
+  color:#fff;
+  background:#5ba722;
+}
+
+
+/* ACTUAL MAP */
+
+.service-map{
+  width:100%;
+  min-height:590px;
+
+  z-index:1;
+  background:#dce9d5;
+}
+
+.service-map .leaflet-control-zoom a{
+  color:#285b12;
+}
+
+.service-map .leaflet-popup-content-wrapper{
+  border-radius:12px;
+}
+
+.service-map .leaflet-popup-content{
+  color:#172317;
+  line-height:1.45;
+}
+
+.map-card-bottom{
+  min-height:65px;
+
+  display:flex;
+  align-items:center;
+  gap:11px;
+
+  padding:16px 22px;
+
+  background:#f3f6ef;
+}
+
+.map-legend-green{
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+
+  display:block;
+
+  background:rgba(140,255,26,.42);
+
+  border:3px solid #67c925;
+  border-radius:5px;
+}
+
+.map-card-bottom p{
+  color:#536153;
+  font-size:13px;
+  line-height:1.4;
+}
+
+
+/* COMMUNITIES */
+
+.communities-section{
+  padding:80px 6% 90px;
+
+  color:#fff;
+  background:
+    linear-gradient(
+      145deg,
+      #071d0c,
+      #0e2f16
+    );
+}
+
+.communities-heading{
+  width:100%;
+  max-width:760px;
+
+  margin-bottom:35px;
+}
+
+.communities-heading h2{
+  color:#fff;
+
+  font-size:clamp(34px,4.5vw,50px);
+  line-height:1.08;
+
+  text-transform:uppercase;
+}
+
+.communities-heading > p:last-child{
+  margin-top:12px;
+
+  color:#ccd9c8;
+  font-size:17px;
+  line-height:1.55;
+}
+
+.community-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:19px;
+}
+
+.community-card{
+  min-height:170px;
+
+  padding:24px;
+
+  background:rgba(255,255,255,.065);
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:17px;
+
+  box-shadow:0 12px 30px rgba(0,0,0,.18);
+
+  transition:.24s ease;
+}
+
+.community-card:hover{
+  transform:translateY(-5px);
+
+  background:rgba(255,255,255,.095);
+  border-color:rgba(140,255,26,.40);
+}
+
+.community-card > span{
+  width:39px;
+  height:39px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:17px;
+
+  color:#13290d;
+  background:#8cff1a;
+
+  border-radius:50%;
+
+  font-size:18px;
+  font-weight:900;
+}
+
+.community-card h3{
+  color:#fff;
+  font-size:20px;
+}
+
+.community-card p{
+  margin-top:8px;
+
+  color:#cad7c6;
+  font-size:14px;
+  line-height:1.45;
+}
+
+.surrounding-card{
+  background:
+    linear-gradient(
+      145deg,
+      rgba(119,205,44,.25),
+      rgba(255,255,255,.06)
+    );
+
+  border-color:rgba(140,255,26,.37);
+}
+
+
+/* BENEFIT STRIP */
+
+.areas-benefits{
+  padding:27px 6%;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+
+  background:#f7f8f4;
+}
+
+.areas-benefits > div{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:13px;
+
+  padding:15px;
+
+  text-align:left;
+}
+
+.areas-benefits > div > span{
+  width:40px;
+  height:40px;
+  flex-shrink:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#16300f;
+  background:#8cff1a;
+
+  border-radius:50%;
+
+  font-weight:900;
+}
+
+.areas-benefits h3{
+  color:#101810;
+  font-size:17px;
+}
+
+.areas-benefits p{
+  margin-top:4px;
+
+  color:#617061;
+  font-size:13px;
+}
+
+.footer-service-area{
+  margin-top:15px;
+  color:#8fdc51 !important;
+  font-weight:800;
+}
+
+
+/* =========================================================
+   SERVICE AREA TABLETS
+========================================================= */
+
+@media(max-width:1050px){
+
+  .areas-map-layout{
+    grid-template-columns:1fr;
+  }
+
+  .service-map{
+    min-height:530px;
+  }
+
+  .community-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+
+@media(max-width:950px){
+
+  .areas-hero{
+    min-height:52vh;
+    padding:150px 5% 65px;
+  }
+
+  .areas-hero h1{
+    font-size:52px;
+  }
+
+  .areas-hero-content > p:last-of-type{
+    font-size:18px;
+  }
+
+  .areas-page,
+  .communities-section{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .areas-benefits{
+    padding-left:5%;
+    padding-right:5%;
+  }
+}
+
+
+/* =========================================================
+   SERVICE AREA PHONES
+========================================================= */
+
+@media(max-width:560px){
+
+  .areas-hero{
+    min-height:auto;
+
+    padding:155px 5% 58px;
+
+    background-position:center;
+  }
+
+  .areas-hero .tagline{
+    font-size:13px;
+  }
+
+  .areas-hero h1{
+    font-size:42px;
+  }
+
+  .areas-hero-content > p:last-of-type{
+    margin:18px 0 26px;
+
+    font-size:16px;
+    line-height:1.45;
+  }
+
+  .areas-hero-btn{
+    width:100%;
+    min-height:54px;
+  }
+
+  .areas-page{
+    padding:55px 5% 65px;
+  }
+
+  .areas-heading h2{
+    font-size:32px;
+  }
+
+  .areas-heading > p:last-child{
+    font-size:15px;
+  }
+
+  .area-checker-card{
+    padding:23px;
+    border-radius:17px;
+  }
+
+  .area-checker-card h3{
+    font-size:24px;
+  }
+
+  .area-search-row{
+    grid-template-columns:1fr;
+  }
+
+  .area-search-row button{
+    width:100%;
+  }
+
+  .map-card-top{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:12px;
+
+    padding:19px;
+  }
+
+  .map-card-top h3{
+    font-size:21px;
+  }
+
+  .reset-map-btn{
+    width:100%;
+  }
+
+  .service-map{
+    min-height:455px;
+  }
+
+  .map-card-bottom{
+    align-items:flex-start;
+  }
+
+  .communities-section{
+    padding:60px 5% 68px;
+  }
+
+  .communities-heading h2{
+    font-size:32px;
+  }
+
+  .communities-heading > p:last-child{
+    font-size:15px;
+  }
+
+  .community-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .community-card{
+    min-height:145px;
+  }
+
+  .areas-benefits{
+    grid-template-columns:1fr;
+    gap:4px;
+
+    padding:25px 5%;
+  }
+
+  .areas-benefits > div{
+    justify-content:flex-start;
+  }
+}
