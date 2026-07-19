@@ -10,20 +10,22 @@
 
   <title>Service Areas | Los Bros Landscaping</title>
 
-  <!-- Interactive map design -->
+  <!-- Leaflet interactive map -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   >
 
-  <!-- Increase the version after future CSS updates -->
-  <link rel="stylesheet" href="style.css?v=27">
+  <!-- Increase this version after future CSS changes -->
+  <link rel="stylesheet" href="style.css?v=29">
 </head>
 
 <body class="areas-body">
 
 
-<!-- TOP NAVIGATION -->
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 <header class="navbar">
 
   <a href="index.html" class="logo-box">
@@ -49,26 +51,29 @@
 </header>
 
 
-<!-- SERVICE AREA HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 <section class="areas-hero">
 
   <div class="areas-hero-content">
 
     <p class="tagline">
-      Local Service You Can Count On
+      Local Lawn Care and Landscaping
     </p>
 
     <h1>
-      Our <span>Service Area</span>
+      Areas We <span>Serve</span>
     </h1>
 
     <p>
-      We proudly provide lawn care and landscaping services
-      throughout Gadsden and nearby communities.
+      We serve Gadsden and several nearby communities.
+      Search your address below to see where your property
+      is located and send us a quote request.
     </p>
 
-    <a href="#serviceAreaChecker" class="areas-hero-btn">
-      Check Your Address
+    <a href="#addressChecker" class="areas-hero-btn">
+      Search Your Address
     </a>
 
   </div>
@@ -76,22 +81,24 @@
 </section>
 
 
-<!-- INTERACTIVE SERVICE AREA MAP -->
-<main class="areas-page" id="serviceAreaChecker">
+<!-- =====================================================
+     ADDRESS SEARCH AND MAP
+===================================================== -->
+<main class="areas-page" id="addressChecker">
 
   <div class="areas-heading">
 
     <p class="section-kicker">
-      Los Bros Landscaping
+      Service Area Map
     </p>
 
     <h2>
-      Do We Service Your Address?
+      Find Your Property
     </h2>
 
     <p>
-      Enter your address or select a location directly on the map.
-      The highlighted green section shows our normal service area.
+      Enter your full address or tap directly on the map.
+      We will show the closest city in our regular service area.
     </p>
 
   </div>
@@ -100,21 +107,17 @@
   <div class="areas-map-layout">
 
 
-    <!-- ADDRESS CHECKER -->
+    <!-- ADDRESS SEARCH CARD -->
     <section class="area-checker-card">
 
-      <div class="area-checker-number">
-        1
-      </div>
-
       <h3>
-        Enter Your Address
+        Check Your Address
       </h3>
 
-      <p>
-        Check whether your home or property is inside our normal
-        service area.
+      <p class="area-checker-intro">
+        Add your street, city, and ZIP code for the most accurate result.
       </p>
+
 
       <form id="areaSearchForm" class="area-search-form">
 
@@ -122,27 +125,23 @@
           Property Address
         </label>
 
-        <div class="area-search-row">
+        <input
+          id="areaAddress"
+          name="address"
+          type="text"
+          placeholder="123 Main Street, Gadsden, AL 35901"
+          autocomplete="street-address"
+          required
+        >
 
-          <input
-            id="areaAddress"
-            name="address"
-            type="text"
-            placeholder="Example: 123 Main Street, Gadsden, AL"
-            autocomplete="street-address"
-            required
-          >
-
-          <button type="submit">
-            Check Address
-          </button>
-
-        </div>
+        <button type="submit">
+          Find Address
+        </button>
 
       </form>
 
 
-      <!-- RESULT MESSAGE -->
+      <!-- SEARCH RESULT -->
       <div
         class="area-result"
         id="areaResult"
@@ -154,10 +153,10 @@
         </div>
 
         <div>
-          <strong>Select Your Location</strong>
+          <strong>Enter Your Address</strong>
 
           <p>
-            Search an address or tap anywhere on the map.
+            You can also tap anywhere directly on the map.
           </p>
         </div>
 
@@ -173,42 +172,34 @@
       </a>
 
 
-      <div class="map-directions">
+      <div class="area-help-box">
 
-        <h4>How It Works</h4>
+        <h4>
+          Located a little farther away?
+        </h4>
 
-        <div>
-          <span>1</span>
-          <p>Enter your property address.</p>
-        </div>
-
-        <div>
-          <span>2</span>
-          <p>We locate it on the interactive map.</p>
-        </div>
-
-        <div>
-          <span>3</span>
-          <p>See whether it is inside our normal service area.</p>
-        </div>
+        <p>
+          Send us your address anyway. We may still accept the job
+          depending on the location and type of work.
+        </p>
 
       </div>
 
     </section>
 
 
-    <!-- MOVABLE MAP -->
+    <!-- INTERACTIVE MAP -->
     <section class="interactive-map-card">
 
       <div class="map-card-top">
 
         <div>
           <p class="map-small-title">
-            Interactive Service Map
+            Interactive Map
           </p>
 
           <h3>
-            Gadsden & Surrounding Areas
+            Gadsden and Nearby Cities
           </h3>
         </div>
 
@@ -217,24 +208,26 @@
           id="resetAreaMap"
           class="reset-map-btn"
         >
-          Reset Map
+          Show All Cities
         </button>
 
       </div>
 
+
       <div
         id="serviceMap"
         class="service-map"
-        aria-label="Interactive service area map"
+        aria-label="Interactive map showing the Los Bros Landscaping service cities"
       ></div>
+
 
       <div class="map-card-bottom">
 
-        <span class="map-legend-green"></span>
+        <span class="map-pin-example"></span>
 
         <p>
-          Green highlighted area represents our normal service zone.
-          Nearby properties may still be considered.
+          Green markers show the communities we regularly serve.
+          Tap a marker to view the city name.
         </p>
 
       </div>
@@ -246,7 +239,9 @@
 </main>
 
 
-<!-- COMMUNITIES -->
+<!-- =====================================================
+     CITIES
+===================================================== -->
 <section class="communities-section">
 
   <div class="communities-heading">
@@ -256,12 +251,11 @@
     </p>
 
     <h2>
-      Proudly Serving Our Local Area
+      Serving Gadsden and Nearby Areas
     </h2>
 
     <p>
-      Our normal service area includes these communities and
-      surrounding neighborhoods.
+      Tap a city below to open its location on the map.
     </p>
 
   </div>
@@ -269,98 +263,143 @@
 
   <div class="community-grid">
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Gadsden</h3>
-      <p>Our main service area.</p>
-    </article>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Attalla</h3>
-      <p>Lawn care and landscaping.</p>
-    </article>
+    <button
+      class="community-card"
+      type="button"
+      data-lat="34.0143"
+      data-lng="-86.0066"
+      data-city="Gadsden"
+    >
+      <span class="community-pin">📍</span>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Reece City</h3>
-      <p>Residential service available.</p>
-    </article>
+      <div>
+        <h3>Gadsden</h3>
+        <p>Our main service area.</p>
+      </div>
+    </button>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Rainbow City</h3>
-      <p>Reliable local yard service.</p>
-    </article>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Southside</h3>
-      <p>Quotes based on property location.</p>
-    </article>
+    <button
+      class="community-card"
+      type="button"
+      data-lat="34.0218"
+      data-lng="-86.0886"
+      data-city="Attalla"
+    >
+      <span class="community-pin">📍</span>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Glencoe</h3>
-      <p>Lawn and landscaping services.</p>
-    </article>
+      <div>
+        <h3>Attalla</h3>
+        <p>Lawn and landscaping work available.</p>
+      </div>
+    </button>
 
-    <article class="community-card">
-      <span>📍</span>
-      <h3>Hokes Bluff</h3>
-      <p>Property services available.</p>
-    </article>
 
-    <article class="community-card surrounding-card">
-      <span>＋</span>
-      <h3>Surrounding Areas</h3>
-      <p>
-        Contact us if you are located near the highlighted area.
-      </p>
-    </article>
+    <button
+      class="community-card"
+      type="button"
+      data-lat="34.0737"
+      data-lng="-86.0339"
+      data-city="Reece City"
+    >
+      <span class="community-pin">📍</span>
+
+      <div>
+        <h3>Reece City</h3>
+        <p>Residential properties welcome.</p>
+      </div>
+    </button>
+
+
+    <button
+      class="community-card"
+      type="button"
+      data-lat="33.9287"
+      data-lng="-86.1399"
+      data-city="Rainbow City"
+    >
+      <span class="community-pin">📍</span>
+
+      <div>
+        <h3>Rainbow City</h3>
+        <p>Regular lawn and yard service.</p>
+      </div>
+    </button>
+
+
+    <button
+      class="community-card"
+      type="button"
+      data-lat="33.9245"
+      data-lng="-86.0225"
+      data-city="Southside"
+    >
+      <span class="community-pin">📍</span>
+
+      <div>
+        <h3>Southside</h3>
+        <p>Availability depends on the property.</p>
+      </div>
+    </button>
+
+
+    <button
+      class="community-card"
+      type="button"
+      data-lat="33.9570"
+      data-lng="-85.9325"
+      data-city="Glencoe"
+    >
+      <span class="community-pin">📍</span>
+
+      <div>
+        <h3>Glencoe</h3>
+        <p>Lawn care and landscaping available.</p>
+      </div>
+    </button>
+
+
+    <button
+      class="community-card"
+      type="button"
+      data-lat="33.9982"
+      data-lng="-85.8661"
+      data-city="Hokes Bluff"
+    >
+      <span class="community-pin">📍</span>
+
+      <div>
+        <h3>Hokes Bluff</h3>
+        <p>Local property services available.</p>
+      </div>
+    </button>
+
+
+    <a
+      class="community-card surrounding-card"
+      href="contact.html"
+    >
+      <span class="community-pin">＋</span>
+
+      <div>
+        <h3>Nearby Areas</h3>
+        <p>Send your address and we will check it.</p>
+      </div>
+    </a>
 
   </div>
 
 </section>
 
 
-<!-- LOCAL BENEFITS -->
-<section class="areas-benefits">
-
-  <div>
-    <span>✓</span>
-
-    <div>
-      <h3>Local Service</h3>
-      <p>Based in the Gadsden area.</p>
-    </div>
-  </div>
-
-  <div>
-    <span>✓</span>
-
-    <div>
-      <h3>Fast Responses</h3>
-      <p>Easy quote requests and communication.</p>
-    </div>
-  </div>
-
-  <div>
-    <span>✓</span>
-
-    <div>
-      <h3>Fair Pricing</h3>
-      <p>Clear starting prices and estimates.</p>
-    </div>
-  </div>
-
-</section>
-
-
-<!-- BOTTOM CTA -->
+<!-- =====================================================
+     BOTTOM CTA
+===================================================== -->
 <section class="footer-cta">
 
   <div>
+
     <h2>
       Ready for a Better-Looking Yard?
     </h2>
@@ -369,6 +408,7 @@
       Let Los Bros Landscaping handle the work so you can
       enjoy the results.
     </p>
+
   </div>
 
   <a href="contact.html" class="main-btn">
@@ -378,7 +418,9 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer class="site-footer">
 
   <div class="footer-business">
@@ -431,11 +473,11 @@
 
     <h3>Service Area</h3>
 
-    <p>Gadsden & Attalla</p>
-    <p>Rainbow City & Southside</p>
-    <p>Glencoe & Hokes Bluff</p>
+    <p>Gadsden and Attalla</p>
+    <p>Rainbow City and Southside</p>
+    <p>Glencoe and Hokes Bluff</p>
     <p>Reece City</p>
-    <p>Nearby Surrounding Areas</p>
+    <p>Nearby communities</p>
 
     <a class="footer-contact-btn" href="contact.html">
       Request a Quote
@@ -446,7 +488,7 @@
 </footer>
 
 
-<!-- LEAFLET MAP JAVASCRIPT -->
+<!-- Leaflet JavaScript -->
 <script
   src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 ></script>
@@ -455,79 +497,6 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  /*
-    Main map location:
-    Gadsden, Alabama
-  */
-  const defaultCenter = [34.0143, -86.0066];
-  const defaultZoom = 11;
-
-
-  /*
-    Approximate service-area boundary based on your drawing.
-
-    You can adjust these coordinates later if you want
-    the green border to move farther in any direction.
-  */
-  const serviceBoundary = [
-    [34.0950, -86.1050],
-    [34.1050, -86.0150],
-    [34.0900, -85.9200],
-    [34.0650, -85.8350],
-    [34.0100, -85.8200],
-    [33.9550, -85.8500],
-    [33.9150, -85.9200],
-    [33.8850, -86.0150],
-    [33.9000, -86.1050],
-    [33.9450, -86.1550],
-    [34.0050, -86.1500],
-    [34.0600, -86.1250]
-  ];
-
-
-  /*
-    Create the movable map.
-  */
-  const serviceMap = L.map("serviceMap", {
-    scrollWheelZoom: true,
-    zoomControl: true
-  }).setView(defaultCenter, defaultZoom);
-
-
-  /*
-    OpenStreetMap background.
-  */
-  L.tileLayer(
-    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-    {
-      maxZoom: 19,
-      attribution:
-        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }
-  ).addTo(serviceMap);
-
-
-  /*
-    Green service-area overlay.
-  */
-  const servicePolygon = L.polygon(serviceBoundary, {
-    color: "#67c925",
-    weight: 4,
-    opacity: 1,
-    fillColor: "#8cff1a",
-    fillOpacity: 0.22
-  }).addTo(serviceMap);
-
-
-  servicePolygon.bindPopup(
-    "<strong>Los Bros Landscaping Service Area</strong><br>" +
-    "We normally work throughout this highlighted area."
-  );
-
-
-  /*
-    City markers.
-  */
   const serviceCities = [
     {
       name: "Gadsden",
@@ -560,26 +529,74 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
 
-  serviceCities.forEach(function (city) {
-    L.circleMarker(city.coordinates, {
-      radius: 7,
-      color: "#ffffff",
-      weight: 2,
-      fillColor: "#62be24",
-      fillOpacity: 1
-    })
-      .addTo(serviceMap)
-      .bindPopup(
-        "<strong>" + city.name + ", Alabama</strong><br>" +
-        "We provide service in this area."
-      );
+  const serviceMap = L.map("serviceMap", {
+    zoomControl: true,
+    scrollWheelZoom: true
+  }).setView([34.0000, -86.0100], 11);
+
+
+  L.tileLayer(
+    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }
+  ).addTo(serviceMap);
+
+
+  const serviceIcon = L.divIcon({
+    className: "service-city-marker",
+    html: '<span></span>',
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+    popupAnchor: [0, -13]
   });
 
 
-  /*
-    Address marker selected by the customer.
-  */
+  const cityMarkers = [];
+
+
+  serviceCities.forEach(function (city) {
+
+    const marker = L.marker(
+      city.coordinates,
+      {
+        icon: serviceIcon
+      }
+    )
+      .addTo(serviceMap)
+      .bindPopup(
+        "<strong>" + city.name + ", Alabama</strong><br>" +
+        "Los Bros Landscaping regularly serves this area."
+      );
+
+    cityMarkers.push(marker);
+
+  });
+
+
+  const markerGroup = L.featureGroup(cityMarkers);
+
+
+  function showAllCities() {
+
+    serviceMap.fitBounds(
+      markerGroup.getBounds(),
+      {
+        padding: [45, 45],
+        maxZoom: 11
+      }
+    );
+
+  }
+
+
+  showAllCities();
+
+
   let selectedMarker = null;
+
 
   const areaResult =
     document.getElementById("areaResult");
@@ -596,73 +613,112 @@ document.addEventListener("DOMContentLoaded", function () {
   const resetButton =
     document.getElementById("resetAreaMap");
 
+  const communityCards =
+    document.querySelectorAll(
+      ".community-card[data-city]"
+    );
 
-  /*
-    Detect whether a point is inside the green polygon.
-  */
-  function pointIsInsidePolygon(latitude, longitude, polygon) {
-    let inside = false;
 
-    for (
-      let current = 0, previous = polygon.length - 1;
-      current < polygon.length;
-      previous = current++
-    ) {
-      const currentLatitude = polygon[current][0];
-      const currentLongitude = polygon[current][1];
+  function calculateDistanceMiles(
+    latitudeOne,
+    longitudeOne,
+    latitudeTwo,
+    longitudeTwo
+  ) {
 
-      const previousLatitude = polygon[previous][0];
-      const previousLongitude = polygon[previous][1];
+    const earthRadiusMiles = 3958.8;
 
-      const crossesBoundary =
-        (
-          (currentLatitude > latitude) !==
-          (previousLatitude > latitude)
-        ) &&
-        (
-          longitude <
-          (
-            (previousLongitude - currentLongitude) *
-            (latitude - currentLatitude)
-          ) /
-          (
-            previousLatitude - currentLatitude
-          ) +
-          currentLongitude
-        );
+    const latitudeDifference =
+      (latitudeTwo - latitudeOne) *
+      Math.PI / 180;
 
-      if (crossesBoundary) {
-        inside = !inside;
-      }
-    }
+    const longitudeDifference =
+      (longitudeTwo - longitudeOne) *
+      Math.PI / 180;
 
-    return inside;
+    const firstLatitude =
+      latitudeOne * Math.PI / 180;
+
+    const secondLatitude =
+      latitudeTwo * Math.PI / 180;
+
+
+    const calculation =
+      Math.sin(latitudeDifference / 2) *
+      Math.sin(latitudeDifference / 2) +
+      Math.cos(firstLatitude) *
+      Math.cos(secondLatitude) *
+      Math.sin(longitudeDifference / 2) *
+      Math.sin(longitudeDifference / 2);
+
+
+    const angle =
+      2 * Math.atan2(
+        Math.sqrt(calculation),
+        Math.sqrt(1 - calculation)
+      );
+
+
+    return earthRadiusMiles * angle;
+
   }
 
 
-  /*
-    Update the message after choosing an address.
-  */
-  function showAreaResult(latitude, longitude, addressText) {
-    const insideArea = pointIsInsidePolygon(
-      latitude,
-      longitude,
-      serviceBoundary
-    );
+  function findClosestCity(latitude, longitude) {
+
+    let closestCity = null;
+    let closestDistance = Infinity;
+
+
+    serviceCities.forEach(function (city) {
+
+      const distance = calculateDistanceMiles(
+        latitude,
+        longitude,
+        city.coordinates[0],
+        city.coordinates[1]
+      );
+
+
+      if (distance < closestDistance) {
+
+        closestDistance = distance;
+        closestCity = city;
+
+      }
+
+    });
+
+
+    return {
+      city: closestCity,
+      distance: closestDistance
+    };
+
+  }
+
+
+  function showSelectedLocation(
+    latitude,
+    longitude,
+    locationText
+  ) {
 
     if (selectedMarker) {
       serviceMap.removeLayer(selectedMarker);
     }
 
-    selectedMarker = L.marker([
-      latitude,
-      longitude
-    ]).addTo(serviceMap);
 
-    selectedMarker.bindPopup(
-      "<strong>Selected Property</strong><br>" +
-      addressText
-    ).openPopup();
+    selectedMarker = L.marker(
+      [latitude, longitude]
+    )
+      .addTo(serviceMap)
+      .bindPopup(
+        "<strong>Selected Property</strong><br>" +
+        locationText
+      )
+      .openPopup();
+
 
     serviceMap.setView(
       [latitude, longitude],
@@ -670,220 +726,288 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
-    const contactAddress = encodeURIComponent(addressText);
+    const closestResult =
+      findClosestCity(latitude, longitude);
+
+    const roundedDistance =
+      closestResult.distance.toFixed(1);
+
+    const likelyRegularArea =
+      closestResult.distance <= 12;
+
 
     areaQuoteButton.href =
-      "contact.html?address=" + contactAddress;
+      "contact.html?address=" +
+      encodeURIComponent(locationText);
 
 
-    if (insideArea) {
+    if (likelyRegularArea) {
+
       areaResult.className =
-        "area-result area-result-inside";
+        "area-result area-result-found";
+
 
       areaResult.innerHTML = `
         <div class="area-result-icon">✓</div>
 
         <div>
-          <strong>Yes! We Service This Area</strong>
+          <strong>Close to ${closestResult.city.name}</strong>
 
           <p>
-            Your selected property appears to be inside
-            our normal service area. Request your free quote.
+            This property is about ${roundedDistance} miles from
+            ${closestResult.city.name}. It appears to be near our
+            regular service area. Contact us to confirm.
           </p>
         </div>
       `;
 
+
       areaQuoteButton.textContent =
-        "Get a Free Quote";
+        "Request a Quote for This Address";
 
     } else {
+
       areaResult.className =
-        "area-result area-result-outside";
+        "area-result area-result-far";
+
 
       areaResult.innerHTML = `
         <div class="area-result-icon">!</div>
 
         <div>
-          <strong>Outside Our Normal Area</strong>
+          <strong>Outside Our Regular Route</strong>
 
           <p>
-            This location appears to be outside our normal
-            service zone. Contact us because nearby jobs may
-            still be accepted.
+            This property is about ${roundedDistance} miles from
+            ${closestResult.city.name}, the closest city we regularly
+            serve. We may still accept the job, so please contact us.
           </p>
         </div>
       `;
 
+
       areaQuoteButton.textContent =
         "Ask About This Location";
+
     }
+
   }
 
 
-  /*
-    Customer taps directly on the map.
-  */
   serviceMap.on("click", function (event) {
-    showAreaResult(
+
+    showSelectedLocation(
       event.latlng.lat,
       event.latlng.lng,
       "Location selected from the map"
     );
+
   });
 
 
-  /*
-    Search the entered address using OpenStreetMap.
-  */
-  searchForm.addEventListener("submit", async function (event) {
-    event.preventDefault();
+  searchForm.addEventListener(
+    "submit",
+    async function (event) {
 
-    const enteredAddress =
-      addressInput.value.trim();
-
-    if (!enteredAddress) {
-      return;
-    }
-
-    areaResult.className =
-      "area-result area-result-loading";
-
-    areaResult.innerHTML = `
-      <div class="area-result-icon">⌕</div>
-
-      <div>
-        <strong>Checking Address...</strong>
-
-        <p>
-          Please wait while we find your property.
-        </p>
-      </div>
-    `;
+      event.preventDefault();
 
 
-    try {
-      const searchAddress =
-        enteredAddress.toLowerCase().includes("alabama")
-          ? enteredAddress
-          : enteredAddress + ", Alabama";
+      const enteredAddress =
+        addressInput.value.trim();
 
 
-      const searchUrl =
-        "https://nominatim.openstreetmap.org/search" +
-        "?format=jsonv2" +
-        "&countrycodes=us" +
-        "&limit=1" +
-        "&q=" +
-        encodeURIComponent(searchAddress);
-
-
-      const response =
-        await fetch(searchUrl);
-
-      if (!response.ok) {
-        throw new Error("Address search failed.");
-      }
-
-      const results =
-        await response.json();
-
-
-      if (!results.length) {
-        areaResult.className =
-          "area-result area-result-outside";
-
-        areaResult.innerHTML = `
-          <div class="area-result-icon">?</div>
-
-          <div>
-            <strong>Address Not Found</strong>
-
-            <p>
-              Check the spelling or include the city and ZIP code.
-            </p>
-          </div>
-        `;
-
+      if (!enteredAddress) {
         return;
       }
 
 
-      const result = results[0];
-
-      showAreaResult(
-        Number(result.lat),
-        Number(result.lon),
-        result.display_name
-      );
-
-    } catch (error) {
       areaResult.className =
-        "area-result area-result-outside";
+        "area-result area-result-loading";
+
 
       areaResult.innerHTML = `
-        <div class="area-result-icon">!</div>
+        <div class="area-result-icon">⌕</div>
 
         <div>
-          <strong>Unable to Search Right Now</strong>
+          <strong>Finding Your Address</strong>
 
           <p>
-            Please try again or select the property directly
-            on the map.
+            Please wait while the map searches for the property.
           </p>
         </div>
       `;
-    }
-  });
 
 
-  /*
-    Return map to the original view.
-  */
-  resetButton.addEventListener("click", function () {
-    serviceMap.fitBounds(
-      servicePolygon.getBounds(),
-      {
-        padding: [30, 30]
+      try {
+
+        const searchAddress =
+          enteredAddress.toLowerCase().includes("alabama")
+            ? enteredAddress
+            : enteredAddress + ", Alabama";
+
+
+        const searchUrl =
+          "https://nominatim.openstreetmap.org/search" +
+          "?format=jsonv2" +
+          "&countrycodes=us" +
+          "&limit=1" +
+          "&q=" +
+          encodeURIComponent(searchAddress);
+
+
+        const response =
+          await fetch(searchUrl);
+
+
+        if (!response.ok) {
+          throw new Error("Address search failed.");
+        }
+
+
+        const results =
+          await response.json();
+
+
+        if (!results.length) {
+
+          areaResult.className =
+            "area-result area-result-far";
+
+
+          areaResult.innerHTML = `
+            <div class="area-result-icon">?</div>
+
+            <div>
+              <strong>Address Not Found</strong>
+
+              <p>
+                Check the spelling and include the city,
+                state, and ZIP code.
+              </p>
+            </div>
+          `;
+
+          return;
+
+        }
+
+
+        const result = results[0];
+
+
+        showSelectedLocation(
+          Number(result.lat),
+          Number(result.lon),
+          result.display_name
+        );
+
+      } catch (error) {
+
+        areaResult.className =
+          "area-result area-result-far";
+
+
+        areaResult.innerHTML = `
+          <div class="area-result-icon">!</div>
+
+          <div>
+            <strong>Search Is Unavailable</strong>
+
+            <p>
+              Try again or tap your property directly on the map.
+            </p>
+          </div>
+        `;
+
       }
-    );
+
+    }
+  );
+
+
+  resetButton.addEventListener("click", function () {
+
+    showAllCities();
+
 
     if (selectedMarker) {
+
       serviceMap.removeLayer(selectedMarker);
       selectedMarker = null;
+
     }
+
+
+    addressInput.value = "";
+
 
     areaResult.className =
       "area-result";
+
 
     areaResult.innerHTML = `
       <div class="area-result-icon">📍</div>
 
       <div>
-        <strong>Select Your Location</strong>
+        <strong>Enter Your Address</strong>
 
         <p>
-          Search an address or tap anywhere on the map.
+          You can also tap anywhere directly on the map.
         </p>
       </div>
     `;
 
+
     areaQuoteButton.href =
       "contact.html";
 
+
     areaQuoteButton.textContent =
       "Request a Free Quote";
+
   });
 
 
-  /*
-    Display the full green area when the page loads.
-  */
-  serviceMap.fitBounds(
-    servicePolygon.getBounds(),
-    {
-      padding: [25, 25]
-    }
-  );
+  communityCards.forEach(function (card) {
+
+    card.addEventListener("click", function () {
+
+      const latitude =
+        Number(card.getAttribute("data-lat"));
+
+      const longitude =
+        Number(card.getAttribute("data-lng"));
+
+      const cityName =
+        card.getAttribute("data-city");
+
+
+      serviceMap.setView(
+        [latitude, longitude],
+        13
+      );
+
+
+      cityMarkers.forEach(function (marker, index) {
+
+        if (
+          serviceCities[index].name === cityName
+        ) {
+          marker.openPopup();
+        }
+
+      });
+
+
+      document
+        .getElementById("addressChecker")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    });
+
+  });
 
 });
 </script>
