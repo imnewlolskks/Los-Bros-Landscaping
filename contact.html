@@ -1,134 +1,976 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact | Los Bros Landscaping</title>
+  <meta charset="UTF-8">
 
-<link rel="stylesheet" href="style.css">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Request a free lawn care or landscaping quote from Los Bros Landscaping in Gadsden, Alabama."
+  >
+
+  <title>Contact | Los Bros Landscaping</title>
+
+  <!-- Increase the version after future CSS changes -->
+  <link rel="stylesheet" href="style.css?v=30">
 </head>
 
-<body>
+<body class="contact-body">
 
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 <header class="navbar">
 
-<div class="logo">
-☘ LOS BROS
-<span>LANDSCAPING</span>
-</div>
+  <a href="index.html" class="logo-box">
+    <img
+      src="image-removebg-preview.png"
+      alt="Los Bros Landscaping Logo"
+    >
+  </a>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="gallery.html">Gallery</a>
-<a href="reviews.html">Reviews</a>
-<a href="areas.html">Service Areas</a>
-<a class="active" href="contact.html">Contact</a>
-</nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="areas.html">Service Areas</a>
+    <a class="active" href="contact.html">Contact</a>
+  </nav>
 
-<a class="quote-btn" href="contact.html">
-Get Free Quote
-</a>
+  <a class="quote-btn" href="#quoteForm">
+    Get a Free Quote
+  </a>
 
 </header>
 
-<section class="page light">
 
-<h1>Get a Free Quote</h1>
+<!-- =====================================================
+     CONTACT HERO
+===================================================== -->
+<section class="contact-hero">
 
-<p class="subtitle">
-Fill out the form below and we'll get back to you as soon as possible.
-</p>
+  <div class="contact-hero-content">
 
-<form>
+    <p class="tagline">
+      Tell Us What Your Yard Needs
+    </p>
 
-<input
-type="text"
-placeholder="Full Name"
-required>
+    <h1>
+      Get a <span>Free Quote</span>
+    </h1>
 
-<input
-type="tel"
-placeholder="Phone Number"
-required>
+    <p>
+      Send us a few details about the work you need.
+      We will look over your request and get back to you
+      as soon as possible.
+    </p>
 
-<input
-type="email"
-placeholder="Email Address">
+    <div class="contact-hero-buttons">
 
-<input
-type="text"
-placeholder="Property Address">
+      <a
+        class="contact-call-btn"
+        href="tel:+12566385396"
+      >
+        Call 256-638-5396
+      </a>
 
-<select required>
+      <a
+        class="contact-text-btn"
+        href="sms:+12566385396"
+      >
+        Send a Message
+      </a>
 
-<option selected disabled>
-Select a Service
-</option>
+    </div>
 
-<option>Lawn Mowing</option>
-
-<option>Hedge Trimming</option>
-
-<option>Weed Control</option>
-
-<option>Mulch Installation</option>
-
-<option>Yard Cleanup</option>
-
-<option>Landscape Lighting</option>
-
-<option>Irrigation Repair</option>
-
-<option>Plant Installation</option>
-
-</select>
-
-<textarea
-placeholder="Tell us about your project..."
-rows="6"></textarea>
-
-<button type="submit">
-Request Free Estimate
-</button>
-
-</form>
-
-<br><br>
-
-<div class="reviews">
-
-<div class="review">
-
-<h3>📞 Phone</h3>
-
-<p>(256) 458-1234</p>
-
-</div>
-
-<div class="review">
-
-<h3>📧 Email</h3>
-
-<p>losbroslandscaping@gmail.com</p>
-
-</div>
-
-<div class="review">
-
-<h3>📍 Location</h3>
-
-<p>Gadsden, Alabama</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
-<script src="script.js"></script>
+
+<!-- =====================================================
+     MAIN CONTACT AREA
+===================================================== -->
+<main class="contact-page">
+
+  <div class="contact-heading">
+
+    <p class="section-kicker">
+      Los Bros Landscaping
+    </p>
+
+    <h2>
+      Tell Us About the Job
+    </h2>
+
+    <p>
+      Fill out the form below with as much information as you can.
+      After you submit it, your phone will open a prepared text
+      message that you can send to us.
+    </p>
+
+  </div>
+
+
+  <div class="contact-layout">
+
+
+    <!-- =================================================
+         QUOTE FORM
+    ================================================== -->
+    <section class="contact-form-card" id="quoteForm">
+
+      <div class="contact-form-top">
+
+        <div class="contact-form-number">
+          1
+        </div>
+
+        <div>
+          <p>Free Estimate Request</p>
+          <h3>Property and Job Details</h3>
+        </div>
+
+      </div>
+
+
+      <form id="contactQuoteForm">
+
+        <div class="contact-form-grid">
+
+
+          <!-- NAME -->
+          <div class="contact-field">
+
+            <label for="customerName">
+              Your Name <span>*</span>
+            </label>
+
+            <input
+              id="customerName"
+              name="customerName"
+              type="text"
+              placeholder="First and last name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+
+          <!-- PHONE -->
+          <div class="contact-field">
+
+            <label for="customerPhone">
+              Phone Number <span>*</span>
+            </label>
+
+            <input
+              id="customerPhone"
+              name="customerPhone"
+              type="tel"
+              placeholder="Example: 256-555-1234"
+              autocomplete="tel"
+              required
+            >
+
+          </div>
+
+
+          <!-- EMAIL -->
+          <div class="contact-field">
+
+            <label for="customerEmail">
+              Email Address
+            </label>
+
+            <input
+              id="customerEmail"
+              name="customerEmail"
+              type="email"
+              placeholder="Optional"
+              autocomplete="email"
+            >
+
+          </div>
+
+
+          <!-- CONTACT METHOD -->
+          <div class="contact-field">
+
+            <label for="contactPreference">
+              Best Way to Contact You
+            </label>
+
+            <select
+              id="contactPreference"
+              name="contactPreference"
+            >
+              <option value="Text message">
+                Text message
+              </option>
+
+              <option value="Phone call">
+                Phone call
+              </option>
+
+              <option value="Email">
+                Email
+              </option>
+            </select>
+
+          </div>
+
+
+          <!-- SERVICE -->
+          <div class="contact-field contact-field-full">
+
+            <label for="serviceNeeded">
+              What Service Do You Need? <span>*</span>
+            </label>
+
+            <select
+              id="serviceNeeded"
+              name="serviceNeeded"
+              required
+            >
+              <option value="">
+                Choose a service
+              </option>
+
+              <option value="Lawn mowing">
+                Lawn Mowing
+              </option>
+
+              <option value="Edging and blowing">
+                Edging and Blowing
+              </option>
+
+              <option value="Weed pulling">
+                Weed Pulling
+              </option>
+
+              <option value="Weed control">
+                Weed Control
+              </option>
+
+              <option value="Hedge trimming">
+                Hedge Trimming
+              </option>
+
+              <option value="Yard cleanup">
+                Yard Cleanup
+              </option>
+
+              <option value="Mulch installation">
+                Mulch Installation
+              </option>
+
+              <option value="Plant installation or removal">
+                Plant Installation or Removal
+              </option>
+
+              <option value="Irrigation repair or installation">
+                Irrigation Repair or Installation
+              </option>
+
+              <option value="Landscape lighting">
+                Landscape Lighting
+              </option>
+
+              <option value="Trash or debris haul-off">
+                Trash or Debris Haul-Off
+              </option>
+
+              <option value="Several services">
+                Several Services
+              </option>
+
+              <option value="Other landscaping work">
+                Other Landscaping Work
+              </option>
+            </select>
+
+          </div>
+
+
+          <!-- ADDRESS -->
+          <div class="contact-field contact-field-full">
+
+            <label for="propertyAddress">
+              Property Address <span>*</span>
+            </label>
+
+            <input
+              id="propertyAddress"
+              name="propertyAddress"
+              type="text"
+              placeholder="Street, city, state, and ZIP code"
+              autocomplete="street-address"
+              required
+            >
+
+          </div>
+
+
+          <!-- PROPERTY SIZE -->
+          <div class="contact-field">
+
+            <label for="propertySize">
+              Approximate Property Size
+            </label>
+
+            <select
+              id="propertySize"
+              name="propertySize"
+            >
+              <option value="Not sure">
+                Not sure
+              </option>
+
+              <option value="Small property">
+                Small
+              </option>
+
+              <option value="Medium property">
+                Medium
+              </option>
+
+              <option value="Large property">
+                Large
+              </option>
+
+              <option value="One acre or more">
+                One Acre or More
+              </option>
+            </select>
+
+          </div>
+
+
+          <!-- TIMING -->
+          <div class="contact-field">
+
+            <label for="jobTiming">
+              When Do You Need It?
+            </label>
+
+            <select
+              id="jobTiming"
+              name="jobTiming"
+            >
+              <option value="As soon as possible">
+                As Soon as Possible
+              </option>
+
+              <option value="Within one week">
+                Within One Week
+              </option>
+
+              <option value="Within two weeks">
+                Within Two Weeks
+              </option>
+
+              <option value="No rush">
+                No Rush
+              </option>
+
+              <option value="Not sure yet">
+                Not Sure Yet
+              </option>
+            </select>
+
+          </div>
+
+
+          <!-- RECURRING OR ONE TIME -->
+          <div class="contact-field contact-field-full">
+
+            <label for="serviceFrequency">
+              Is This a One-Time or Recurring Service?
+            </label>
+
+            <select
+              id="serviceFrequency"
+              name="serviceFrequency"
+            >
+              <option value="One-time service">
+                One-Time Service
+              </option>
+
+              <option value="Weekly service">
+                Weekly Service
+              </option>
+
+              <option value="Every two weeks">
+                Every Two Weeks
+              </option>
+
+              <option value="Monthly service">
+                Monthly Service
+              </option>
+
+              <option value="Not sure">
+                Not Sure
+              </option>
+            </select>
+
+          </div>
+
+
+          <!-- DESCRIPTION -->
+          <div class="contact-field contact-field-full">
+
+            <label for="jobDescription">
+              Describe the Work <span>*</span>
+            </label>
+
+            <textarea
+              id="jobDescription"
+              name="jobDescription"
+              rows="7"
+              placeholder="Tell us what needs to be done. You can include how overgrown the yard is, how many bushes need trimming, how large the cleanup area is, or any other helpful details."
+              required
+            ></textarea>
+
+          </div>
+
+        </div>
+
+
+        <!-- PICTURE NOTE -->
+        <div class="contact-picture-note">
+
+          <div class="contact-picture-icon">
+            📷
+          </div>
+
+          <div>
+
+            <strong>
+              Pictures Help Us Give a Better Estimate
+            </strong>
+
+            <p>
+              After you press the button below, attach a few clear
+              pictures to the text message before sending it.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- SUBMIT -->
+        <button
+          class="contact-submit-btn"
+          type="submit"
+        >
+          Text My Quote Request
+        </button>
+
+
+        <p class="contact-form-note">
+          This does not automatically confirm a price or appointment.
+          We will review the information and contact you before any
+          work is scheduled.
+        </p>
+
+      </form>
+
+    </section>
+
+
+    <!-- =================================================
+         RIGHT CONTACT COLUMN
+    ================================================== -->
+    <aside class="contact-sidebar">
+
+
+      <!-- DIRECT CONTACT -->
+      <section class="contact-side-card">
+
+        <p class="contact-small-title">
+          Contact Us Directly
+        </p>
+
+        <h3>
+          Call or Send a Message
+        </h3>
+
+        <p class="contact-side-intro">
+          Have a quick question or need to send pictures?
+          Contact us directly and tell us what you need.
+        </p>
+
+
+        <a
+          class="contact-method-card"
+          href="tel:+12566385396"
+        >
+
+          <span class="contact-method-icon">
+            ☎
+          </span>
+
+          <span>
+            <small>Call Us</small>
+            <strong>256-638-5396</strong>
+          </span>
+
+        </a>
+
+
+        <a
+          class="contact-method-card"
+          href="sms:+12566385396"
+        >
+
+          <span class="contact-method-icon">
+            ✉
+          </span>
+
+          <span>
+            <small>Send a Message</small>
+            <strong>Text 256-638-5396</strong>
+          </span>
+
+        </a>
+
+
+        <a
+          class="contact-method-card"
+          href="areas.html"
+        >
+
+          <span class="contact-method-icon">
+            📍
+          </span>
+
+          <span>
+            <small>Service Area</small>
+            <strong>Gadsden and Nearby Areas</strong>
+          </span>
+
+        </a>
+
+      </section>
+
+
+      <!-- QUOTE PROCESS -->
+      <section class="contact-process-card">
+
+        <p class="contact-small-title">
+          What Happens Next?
+        </p>
+
+        <h3>
+          A Simple Quote Process
+        </h3>
+
+
+        <div class="contact-process-step">
+
+          <span>1</span>
+
+          <div>
+            <strong>Send the job details</strong>
+
+            <p>
+              Tell us what service you need and where
+              the property is located.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="contact-process-step">
+
+          <span>2</span>
+
+          <div>
+            <strong>Add clear pictures</strong>
+
+            <p>
+              Photos help us understand the size and
+              condition of the job.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="contact-process-step">
+
+          <span>3</span>
+
+          <div>
+            <strong>We review your request</strong>
+
+            <p>
+              We may ask a few questions or arrange
+              to see the property.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="contact-process-step">
+
+          <span>4</span>
+
+          <div>
+            <strong>Approve the quote</strong>
+
+            <p>
+              Nothing is scheduled until you agree
+              to the price and service.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </aside>
+
+  </div>
+
+</main>
+
+
+<!-- =====================================================
+     SOCIAL MEDIA
+===================================================== -->
+<section class="contact-social-section">
+
+  <div class="contact-social-heading">
+
+    <p class="section-kicker">
+      Follow Our Work
+    </p>
+
+    <h2>
+      Find Los Bros Landscaping Online
+    </h2>
+
+    <p>
+      See recent projects, before-and-after pictures,
+      business updates, and customer reviews.
+    </p>
+
+  </div>
+
+
+  <div class="contact-social-grid">
+
+
+    <!-- Replace # with your Instagram link later -->
+    <a
+      class="contact-social-card social-instagram"
+      href="#"
+      aria-label="Los Bros Landscaping on Instagram"
+    >
+      <span class="social-letter">IG</span>
+
+      <div>
+        <h3>Instagram</h3>
+        <p>Photos and recent projects.</p>
+      </div>
+    </a>
+
+
+    <!-- Replace # with your Facebook link later -->
+    <a
+      class="contact-social-card social-facebook"
+      href="#"
+      aria-label="Los Bros Landscaping on Facebook"
+    >
+      <span class="social-letter">f</span>
+
+      <div>
+        <h3>Facebook</h3>
+        <p>Updates and local posts.</p>
+      </div>
+    </a>
+
+
+    <!-- Replace # with your TikTok link later -->
+    <a
+      class="contact-social-card social-tiktok"
+      href="#"
+      aria-label="Los Bros Landscaping on TikTok"
+    >
+      <span class="social-letter">♪</span>
+
+      <div>
+        <h3>TikTok</h3>
+        <p>Short project videos.</p>
+      </div>
+    </a>
+
+
+    <!-- Replace # with your Google Business link later -->
+    <a
+      class="contact-social-card social-google"
+      href="#"
+      aria-label="Los Bros Landscaping Google Business Profile"
+    >
+      <span class="social-letter">G</span>
+
+      <div>
+        <h3>Google Business</h3>
+        <p>Business information and reviews.</p>
+      </div>
+    </a>
+
+
+    <!-- Replace # with your Nextdoor link later -->
+    <a
+      class="contact-social-card social-nextdoor"
+      href="#"
+      aria-label="Los Bros Landscaping on Nextdoor"
+    >
+      <span class="social-letter">N</span>
+
+      <div>
+        <h3>Nextdoor</h3>
+        <p>Local neighborhood updates.</p>
+      </div>
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     BOTTOM CTA
+===================================================== -->
+<section class="footer-cta">
+
+  <div>
+
+    <h2>
+      Ready for a Better-Looking Yard?
+    </h2>
+
+    <p>
+      Tell us what your property needs and request
+      your free quote today.
+    </p>
+
+  </div>
+
+  <a
+    href="tel:+12566385396"
+    class="main-btn"
+  >
+    Call for a Free Quote
+  </a>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer class="site-footer">
+
+
+  <div class="footer-business">
+
+    <img
+      src="image-removebg-preview.png"
+      alt="Los Bros Landscaping Logo"
+    >
+
+    <p>
+      High-quality landscaping services with attention to detail.
+    </p>
+
+    <p class="footer-service-area">
+      Serving Gadsden and surrounding areas.
+    </p>
+
+  </div>
+
+
+  <div>
+
+    <h3>Quick Links</h3>
+
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="areas.html">Service Areas</a>
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+
+  <div>
+
+    <h3>Services</h3>
+
+    <a href="services.html">Lawn Mowing</a>
+    <a href="services.html">Weed Pulling</a>
+    <a href="services.html">Weed Control</a>
+    <a href="services.html">Hedge Trimming</a>
+    <a href="services.html">Yard Cleanups</a>
+    <a href="services.html">Irrigation Systems</a>
+    <a href="services.html">Light Installation</a>
+
+  </div>
+
+
+  <div>
+
+    <h3>Contact</h3>
+
+    <a href="tel:+12566385396">
+      Call: 256-638-5396
+    </a>
+
+    <a href="sms:+12566385396">
+      Send a Message
+    </a>
+
+    <p>Gadsden, Alabama</p>
+    <p>Free Estimates</p>
+
+    <a
+      class="footer-contact-btn"
+      href="#quoteForm"
+    >
+      Request a Quote
+    </a>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     QUOTE FORM JAVASCRIPT
+===================================================== -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const quoteForm =
+    document.getElementById("contactQuoteForm");
+
+  const addressInput =
+    document.getElementById("propertyAddress");
+
+
+  /*
+    If someone arrives from the Service Areas page,
+    automatically place the address inside the form.
+  */
+  const pageParameters =
+    new URLSearchParams(window.location.search);
+
+  const addressFromMap =
+    pageParameters.get("address");
+
+
+  if (addressFromMap && addressInput) {
+    addressInput.value = addressFromMap;
+  }
+
+
+  quoteForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+
+    const customerName =
+      document.getElementById("customerName").value.trim();
+
+    const customerPhone =
+      document.getElementById("customerPhone").value.trim();
+
+    const customerEmail =
+      document.getElementById("customerEmail").value.trim();
+
+    const contactPreference =
+      document.getElementById("contactPreference").value;
+
+    const serviceNeeded =
+      document.getElementById("serviceNeeded").value;
+
+    const propertyAddress =
+      document.getElementById("propertyAddress").value.trim();
+
+    const propertySize =
+      document.getElementById("propertySize").value;
+
+    const jobTiming =
+      document.getElementById("jobTiming").value;
+
+    const serviceFrequency =
+      document.getElementById("serviceFrequency").value;
+
+    const jobDescription =
+      document.getElementById("jobDescription").value.trim();
+
+
+    const quoteMessage =
+`Hello Los Bros Landscaping! I would like a free quote.
+
+Name: ${customerName}
+Phone: ${customerPhone}
+Email: ${customerEmail || "Not provided"}
+Preferred contact: ${contactPreference}
+
+Service needed: ${serviceNeeded}
+Property address: ${propertyAddress}
+Property size: ${propertySize}
+Service frequency: ${serviceFrequency}
+Timing: ${jobTiming}
+
+Job details:
+${jobDescription}
+
+I can attach pictures of the property to this message.`;
+
+
+    const encodedMessage =
+      encodeURIComponent(quoteMessage);
+
+
+    /*
+      This opens the customer's text-message app with
+      your number and their quote information prepared.
+    */
+    const isAppleDevice =
+      /iPad|iPhone|iPod|Macintosh/i.test(
+        navigator.userAgent
+      );
+
+
+    const textLink =
+      isAppleDevice
+        ? "sms:+12566385396&body=" + encodedMessage
+        : "sms:+12566385396?body=" + encodedMessage;
+
+
+    window.location.href = textLink;
+
+  });
+
+});
+</script>
 
 </body>
-
 </html>
