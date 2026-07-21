@@ -3471,7 +3471,7 @@ nav a.active{
 
 
 /* =========================================================
-   CONTACT HERO
+   HERO
 ========================================================= */
 
 .contact-hero{
@@ -3485,8 +3485,8 @@ nav a.active{
   background-image:
     linear-gradient(
       90deg,
-      rgba(0,0,0,.88),
-      rgba(0,0,0,.55),
+      rgba(0,0,0,.89),
+      rgba(0,0,0,.56),
       rgba(0,0,0,.17)
     ),
     url("home-bg.jpg");
@@ -3512,8 +3512,7 @@ nav a.active{
 
   text-transform:uppercase;
 
-  text-shadow:
-    0 8px 34px rgba(0,0,0,.88);
+  text-shadow:0 8px 34px rgba(0,0,0,.88);
 }
 
 .contact-hero h1 span{
@@ -3521,7 +3520,7 @@ nav a.active{
 }
 
 .contact-hero-content > p:last-of-type{
-  max-width:670px;
+  max-width:680px;
 
   margin:23px 0 32px;
 
@@ -3530,13 +3529,13 @@ nav a.active{
   font-size:21px;
   line-height:1.55;
 
-  text-shadow:
-    0 4px 18px rgba(0,0,0,.88);
+  text-shadow:0 4px 18px rgba(0,0,0,.88);
 }
 
 .contact-hero-buttons{
   display:flex;
   align-items:center;
+  flex-wrap:wrap;
   gap:14px;
 }
 
@@ -3547,6 +3546,7 @@ nav a.active{
   display:inline-flex;
   align-items:center;
   justify-content:center;
+  gap:10px;
 
   padding:15px 25px;
 
@@ -3601,7 +3601,7 @@ nav a.active{
 
 
 /* =========================================================
-   MAIN WHITE CONTACT AREA
+   MAIN CONTACT AREA
 ========================================================= */
 
 .contact-page{
@@ -3656,7 +3656,7 @@ nav a.active{
 
 
 /* =========================================================
-   WHITE QUOTE FORM
+   QUOTE FORM
 ========================================================= */
 
 .contact-form-card{
@@ -3666,9 +3666,7 @@ nav a.active{
 
   background:#fff;
 
-  border:
-    1px solid rgba(30,70,30,.10);
-
+  border:1px solid rgba(30,70,30,.10);
   border-radius:22px;
 
   box-shadow:
@@ -3684,8 +3682,7 @@ nav a.active{
   margin-bottom:29px;
   padding-bottom:24px;
 
-  border-bottom:
-    1px solid rgba(25,60,25,.10);
+  border-bottom:1px solid rgba(25,60,25,.10);
 }
 
 .contact-form-number{
@@ -3705,8 +3702,7 @@ nav a.active{
   font-size:19px;
   font-weight:900;
 
-  box-shadow:
-    0 7px 18px rgba(80,160,25,.24);
+  box-shadow:0 7px 18px rgba(80,160,25,.24);
 }
 
 .contact-form-top p{
@@ -3768,9 +3764,7 @@ nav a.active{
   color:#172117;
   background:#f8faf6;
 
-  border:
-    1px solid rgba(38,75,35,.17);
-
+  border:1px solid rgba(38,75,35,.17);
   border-radius:11px;
 
   outline:none;
@@ -3787,7 +3781,6 @@ nav a.active{
 .contact-field input,
 .contact-field select{
   min-height:54px;
-
   padding:13px 15px;
 }
 
@@ -3797,7 +3790,6 @@ nav a.active{
   padding:15px;
 
   resize:vertical;
-
   line-height:1.55;
 }
 
@@ -3813,8 +3805,7 @@ nav a.active{
 
   border-color:#72c82a;
 
-  box-shadow:
-    0 0 0 4px rgba(116,203,42,.12);
+  box-shadow:0 0 0 4px rgba(116,203,42,.12);
 }
 
 
@@ -3830,9 +3821,7 @@ nav a.active{
 
   background:#f1f7ed;
 
-  border:
-    1px solid rgba(88,160,42,.19);
-
+  border:1px solid rgba(88,160,42,.19);
   border-radius:13px;
 }
 
@@ -3845,14 +3834,14 @@ nav a.active{
   align-items:center;
   justify-content:center;
 
+  color:#397a18;
   background:#fff;
 
   border-radius:50%;
 
-  font-size:21px;
+  font-size:20px;
 
-  box-shadow:
-    0 6px 16px rgba(0,0,0,.08);
+  box-shadow:0 6px 16px rgba(0,0,0,.08);
 }
 
 .contact-picture-note strong{
@@ -3873,11 +3862,16 @@ nav a.active{
 }
 
 
-/* FORM SUBMIT BUTTON */
+/* SUBMIT BUTTON */
 
 .contact-submit-btn{
   width:100%;
   min-height:58px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
 
   margin-top:20px;
   padding:14px 20px;
@@ -3946,7 +3940,7 @@ nav a.active{
 
 
 /* =========================================================
-   CONTACT SIDEBAR
+   SIDEBAR
 ========================================================= */
 
 .contact-sidebar{
@@ -3960,8 +3954,7 @@ nav a.active{
 
   border-radius:20px;
 
-  box-shadow:
-    0 17px 42px rgba(0,0,0,.16);
+  box-shadow:0 17px 42px rgba(0,0,0,.16);
 }
 
 .contact-side-card{
@@ -3974,16 +3967,14 @@ nav a.active{
       #06160b
     );
 
-  border:
-    1px solid rgba(140,255,26,.22);
+  border:1px solid rgba(140,255,26,.22);
 }
 
 .contact-process-card{
   color:#101810;
   background:#fff;
 
-  border:
-    1px solid rgba(30,70,30,.10);
+  border:1px solid rgba(30,70,30,.10);
 }
 
 .contact-small-title{
@@ -4016,7 +4007,7 @@ nav a.active{
 }
 
 
-/* DIRECT CONTACT BUTTONS */
+/* CONTACT METHOD CARDS */
 
 .contact-method-card{
   display:flex;
@@ -4029,9 +4020,7 @@ nav a.active{
   color:#fff;
   background:rgba(255,255,255,.075);
 
-  border:
-    1px solid rgba(255,255,255,.13);
-
+  border:1px solid rgba(255,255,255,.13);
   border-radius:12px;
 
   text-decoration:none;
@@ -4047,13 +4036,12 @@ nav a.active{
 
   background:rgba(255,255,255,.11);
 
-  border-color:
-    rgba(140,255,26,.42);
+  border-color:rgba(140,255,26,.42);
 }
 
 .contact-method-icon{
-  width:43px;
-  height:43px;
+  width:45px;
+  height:45px;
   flex-shrink:0;
 
   display:flex;
@@ -4066,7 +4054,6 @@ nav a.active{
   border-radius:50%;
 
   font-size:18px;
-  font-weight:900;
 }
 
 .contact-method-card small{
@@ -4075,6 +4062,7 @@ nav a.active{
   color:#aebcab;
 
   font-size:12px;
+  line-height:1.3;
 }
 
 .contact-method-card strong{
@@ -4100,12 +4088,12 @@ nav a.active{
   align-items:flex-start;
   gap:13px;
 
-  margin-top:20px;
+  margin-top:21px;
 }
 
 .contact-process-step > span{
-  width:32px;
-  height:32px;
+  width:33px;
+  height:33px;
   flex-shrink:0;
 
   display:flex;
@@ -4127,6 +4115,7 @@ nav a.active{
   color:#172317;
 
   font-size:15px;
+  line-height:1.3;
 }
 
 .contact-process-step p{
@@ -4135,7 +4124,7 @@ nav a.active{
   color:#667266;
 
   font-size:13px;
-  line-height:1.45;
+  line-height:1.48;
 }
 
 
@@ -4178,31 +4167,31 @@ nav a.active{
 .contact-social-grid{
   display:grid;
   grid-template-columns:repeat(5,minmax(0,1fr));
-  gap:16px;
+  gap:17px;
 }
 
 .contact-social-card{
   min-width:0;
-  min-height:145px;
+  min-height:135px;
 
   display:flex;
   align-items:center;
-  gap:14px;
+  justify-content:center;
+  flex-direction:column;
+  gap:12px;
 
   padding:20px;
 
   color:#172117;
-  background:#f7f9f5;
+  background:#f8faf7;
 
-  border:
-    1px solid rgba(25,65,25,.10);
-
-  border-radius:16px;
+  border:1px solid rgba(25,65,25,.10);
+  border-radius:17px;
 
   text-decoration:none;
+  text-align:center;
 
-  box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
 
   transition:
     transform .24s ease,
@@ -4213,16 +4202,14 @@ nav a.active{
 .contact-social-card:hover{
   transform:translateY(-5px);
 
-  border-color:
-    rgba(93,172,41,.40);
+  border-color:rgba(93,172,41,.40);
 
-  box-shadow:
-    0 20px 39px rgba(0,0,0,.13);
+  box-shadow:0 20px 39px rgba(0,0,0,.13);
 }
 
-.social-letter{
-  width:49px;
-  height:49px;
+.social-icon{
+  width:54px;
+  height:54px;
   flex-shrink:0;
 
   display:flex;
@@ -4232,10 +4219,11 @@ nav a.active{
   color:#fff;
   background:#142218;
 
-  border-radius:13px;
+  border-radius:15px;
 
-  font-size:20px;
-  font-weight:900;
+  font-size:25px;
+
+  box-shadow:0 7px 17px rgba(0,0,0,.13);
 }
 
 .contact-social-card h3{
@@ -4245,51 +4233,38 @@ nav a.active{
   line-height:1.2;
 }
 
-.contact-social-card p{
-  margin-top:5px;
-
-  color:#687368;
-
-  font-size:12px;
-  line-height:1.4;
-}
-
-.social-instagram .social-letter{
+.social-instagram .social-icon{
   background:
     linear-gradient(
       135deg,
-      #7744d8,
-      #d43e89,
-      #e78931
+      #6f45da,
+      #c53691,
+      #ed7a32
     );
 }
 
-.social-facebook .social-letter{
-  background:#287be0;
+.social-facebook .social-icon{
+  background:#1877f2;
 }
 
-.social-tiktok .social-letter{
+.social-tiktok .social-icon{
   background:#111;
 }
 
-.social-google .social-letter{
+.social-google .social-icon{
   color:#4285f4;
   background:#fff;
 
-  border:
-    1px solid rgba(0,0,0,.12);
-
-  box-shadow:
-    0 4px 12px rgba(0,0,0,.10);
+  border:1px solid rgba(0,0,0,.12);
 }
 
-.social-nextdoor .social-letter{
+.social-nextdoor .social-icon{
   background:#65ae32;
 }
 
 
 /* =========================================================
-   CONTACT TABLETS
+   TABLETS
 ========================================================= */
 
 @media(max-width:1100px){
@@ -4337,7 +4312,7 @@ nav a.active{
 
 
 /* =========================================================
-   CONTACT PHONES
+   PHONES
 ========================================================= */
 
 @media(max-width:650px){
@@ -4367,12 +4342,13 @@ nav a.active{
 
   .contact-hero-buttons{
     flex-direction:column;
+    align-items:stretch;
   }
 
   .contact-call-btn,
   .contact-text-btn{
     width:100%;
-    min-height:54px;
+    min-height:55px;
   }
 
   .contact-page{
@@ -4424,7 +4400,7 @@ nav a.active{
   }
 
   .contact-submit-btn{
-    min-height:58px;
+    min-height:59px;
   }
 
   .contact-sidebar{
@@ -4456,11 +4432,31 @@ nav a.active{
   }
 
   .contact-social-grid{
-    grid-template-columns:1fr;
-    gap:14px;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:13px;
   }
 
   .contact-social-card{
-    min-height:110px;
+    min-height:125px;
+    padding:17px 10px;
+  }
+
+  .social-icon{
+    width:50px;
+    height:50px;
+
+    font-size:23px;
+  }
+
+  .contact-social-card h3{
+    font-size:14px;
+  }
+}
+
+
+@media(max-width:370px){
+
+  .contact-social-grid{
+    grid-template-columns:1fr;
   }
 }
