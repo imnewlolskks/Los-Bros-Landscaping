@@ -15,8 +15,14 @@
 
   <title>Contact | Los Bros Landscaping</title>
 
-  <!-- Increase the version after future CSS changes -->
-  <link rel="stylesheet" href="style.css?v=30">
+  <!-- Main website CSS -->
+  <link rel="stylesheet" href="style.css?v=31">
+
+  <!-- Font Awesome: real icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  >
 </head>
 
 <body class="contact-body">
@@ -51,14 +57,14 @@
 
 
 <!-- =====================================================
-     CONTACT HERO
+     HERO
 ===================================================== -->
 <section class="contact-hero">
 
   <div class="contact-hero-content">
 
     <p class="tagline">
-      Tell Us What Your Yard Needs
+      Tell Us What Your Property Needs
     </p>
 
     <h1>
@@ -66,9 +72,8 @@
     </h1>
 
     <p>
-      Send us a few details about the work you need.
-      We will look over your request and get back to you
-      as soon as possible.
+      Tell us what you need done and send a few clear pictures.
+      We will look over the job and contact you about the next step.
     </p>
 
     <div class="contact-hero-buttons">
@@ -77,6 +82,7 @@
         class="contact-call-btn"
         href="tel:+12566385396"
       >
+        <i class="fa-solid fa-phone"></i>
         Call 256-638-5396
       </a>
 
@@ -84,6 +90,7 @@
         class="contact-text-btn"
         href="sms:+12566385396"
       >
+        <i class="fa-solid fa-message"></i>
         Send a Message
       </a>
 
@@ -102,17 +109,17 @@
   <div class="contact-heading">
 
     <p class="section-kicker">
-      Los Bros Landscaping
+      Free Estimate Request
     </p>
 
     <h2>
-      Tell Us About the Job
+      Tell Us About Your Job
     </h2>
 
     <p>
-      Fill out the form below with as much information as you can.
-      After you submit it, your phone will open a prepared text
-      message that you can send to us.
+      Add the basic details below. When you press the button,
+      your phone will open a text message with your information
+      already filled in.
     </p>
 
   </div>
@@ -133,8 +140,8 @@
         </div>
 
         <div>
-          <p>Free Estimate Request</p>
-          <h3>Property and Job Details</h3>
+          <p>Job Information</p>
+          <h3>Request Your Free Estimate</h3>
         </div>
 
       </div>
@@ -175,7 +182,7 @@
               id="customerPhone"
               name="customerPhone"
               type="tel"
-              placeholder="Example: 256-555-1234"
+              placeholder="256-555-1234"
               autocomplete="tel"
               required
             >
@@ -201,11 +208,11 @@
           </div>
 
 
-          <!-- CONTACT METHOD -->
+          <!-- CONTACT PREFERENCE -->
           <div class="contact-field">
 
             <label for="contactPreference">
-              Best Way to Contact You
+              How Should We Contact You?
             </label>
 
             <select
@@ -213,11 +220,11 @@
               name="contactPreference"
             >
               <option value="Text message">
-                Text message
+                Text Message
               </option>
 
               <option value="Phone call">
-                Phone call
+                Phone Call
               </option>
 
               <option value="Email">
@@ -232,7 +239,7 @@
           <div class="contact-field contact-field-full">
 
             <label for="serviceNeeded">
-              What Service Do You Need? <span>*</span>
+              What Do You Need Help With? <span>*</span>
             </label>
 
             <select
@@ -323,7 +330,7 @@
           <div class="contact-field">
 
             <label for="propertySize">
-              Approximate Property Size
+              Property Size
             </label>
 
             <select
@@ -331,19 +338,19 @@
               name="propertySize"
             >
               <option value="Not sure">
-                Not sure
+                Not Sure
               </option>
 
               <option value="Small property">
-                Small
+                Small Property
               </option>
 
               <option value="Medium property">
-                Medium
+                Medium Property
               </option>
 
               <option value="Large property">
-                Large
+                Large Property
               </option>
 
               <option value="One acre or more">
@@ -358,7 +365,7 @@
           <div class="contact-field">
 
             <label for="jobTiming">
-              When Do You Need It?
+              When Would You Like It Done?
             </label>
 
             <select
@@ -389,11 +396,11 @@
           </div>
 
 
-          <!-- RECURRING OR ONE TIME -->
+          <!-- FREQUENCY -->
           <div class="contact-field contact-field-full">
 
             <label for="serviceFrequency">
-              Is This a One-Time or Recurring Service?
+              One-Time or Recurring Service?
             </label>
 
             <select
@@ -428,14 +435,14 @@
           <div class="contact-field contact-field-full">
 
             <label for="jobDescription">
-              Describe the Work <span>*</span>
+              What Needs to Be Done? <span>*</span>
             </label>
 
             <textarea
               id="jobDescription"
               name="jobDescription"
               rows="7"
-              placeholder="Tell us what needs to be done. You can include how overgrown the yard is, how many bushes need trimming, how large the cleanup area is, or any other helpful details."
+              placeholder="Tell us about the job. For example: how overgrown the yard is, how many bushes need trimming, the size of the cleanup area, or anything else we should know."
               required
             ></textarea>
 
@@ -448,18 +455,19 @@
         <div class="contact-picture-note">
 
           <div class="contact-picture-icon">
-            📷
+            <i class="fa-solid fa-camera"></i>
           </div>
 
           <div>
 
             <strong>
-              Pictures Help Us Give a Better Estimate
+              Please Send Pictures When Possible
             </strong>
 
             <p>
-              After you press the button below, attach a few clear
-              pictures to the text message before sending it.
+              Clear pictures help us understand the job and may help
+              us give you a faster estimate. Attach them after your
+              text-message app opens.
             </p>
 
           </div>
@@ -467,19 +475,19 @@
         </div>
 
 
-        <!-- SUBMIT -->
+        <!-- SUBMIT BUTTON -->
         <button
           class="contact-submit-btn"
           type="submit"
         >
+          <i class="fa-solid fa-message"></i>
           Text My Quote Request
         </button>
 
 
         <p class="contact-form-note">
-          This does not automatically confirm a price or appointment.
-          We will review the information and contact you before any
-          work is scheduled.
+          Sending this request does not confirm a price or appointment.
+          We will review the job with you before anything is scheduled.
         </p>
 
       </form>
@@ -488,7 +496,7 @@
 
 
     <!-- =================================================
-         RIGHT CONTACT COLUMN
+         SIDEBAR
     ================================================== -->
     <aside class="contact-sidebar">
 
@@ -497,16 +505,16 @@
       <section class="contact-side-card">
 
         <p class="contact-small-title">
-          Contact Us Directly
+          Prefer to Contact Us Directly?
         </p>
 
         <h3>
-          Call or Send a Message
+          Call or Text Us
         </h3>
 
         <p class="contact-side-intro">
-          Have a quick question or need to send pictures?
-          Contact us directly and tell us what you need.
+          Have a quick question or already have pictures ready?
+          Call or send us a message at the number below.
         </p>
 
 
@@ -516,11 +524,11 @@
         >
 
           <span class="contact-method-icon">
-            ☎
+            <i class="fa-solid fa-phone"></i>
           </span>
 
           <span>
-            <small>Call Us</small>
+            <small>Call Los Bros Landscaping</small>
             <strong>256-638-5396</strong>
           </span>
 
@@ -533,11 +541,11 @@
         >
 
           <span class="contact-method-icon">
-            ✉
+            <i class="fa-solid fa-message"></i>
           </span>
 
           <span>
-            <small>Send a Message</small>
+            <small>Send Pictures or Job Details</small>
             <strong>Text 256-638-5396</strong>
           </span>
 
@@ -550,12 +558,12 @@
         >
 
           <span class="contact-method-icon">
-            📍
+            <i class="fa-solid fa-location-dot"></i>
           </span>
 
           <span>
-            <small>Service Area</small>
-            <strong>Gadsden and Nearby Areas</strong>
+            <small>View Where We Work</small>
+            <strong>See Our Service Areas</strong>
           </span>
 
         </a>
@@ -567,11 +575,11 @@
       <section class="contact-process-card">
 
         <p class="contact-small-title">
-          What Happens Next?
+          What Happens After You Contact Us?
         </p>
 
         <h3>
-          A Simple Quote Process
+          Here Is What to Expect
         </h3>
 
 
@@ -580,10 +588,10 @@
           <span>1</span>
 
           <div>
-            <strong>Send the job details</strong>
+            <strong>Tell us about the job</strong>
 
             <p>
-              Tell us what service you need and where
+              Let us know what you need done and where
               the property is located.
             </p>
           </div>
@@ -596,11 +604,11 @@
           <span>2</span>
 
           <div>
-            <strong>Add clear pictures</strong>
+            <strong>Send a few pictures</strong>
 
             <p>
-              Photos help us understand the size and
-              condition of the job.
+              Pictures help us see the size and condition
+              of the area before we arrive.
             </p>
           </div>
 
@@ -612,11 +620,11 @@
           <span>3</span>
 
           <div>
-            <strong>We review your request</strong>
+            <strong>We look over everything</strong>
 
             <p>
-              We may ask a few questions or arrange
-              to see the property.
+              We may ask a few questions or schedule a time
+              to look at the property in person.
             </p>
           </div>
 
@@ -628,11 +636,11 @@
           <span>4</span>
 
           <div>
-            <strong>Approve the quote</strong>
+            <strong>You decide whether to move forward</strong>
 
             <p>
-              Nothing is scheduled until you agree
-              to the price and service.
+              We will not schedule the work until you agree
+              to the service and price.
             </p>
           </div>
 
@@ -663,8 +671,8 @@
     </h2>
 
     <p>
-      See recent projects, before-and-after pictures,
-      business updates, and customer reviews.
+      Follow our pages to see recent work, business updates,
+      and customer reviews.
     </p>
 
   </div>
@@ -673,78 +681,73 @@
   <div class="contact-social-grid">
 
 
-    <!-- Replace # with your Instagram link later -->
+    <!-- Replace # with your Instagram link -->
     <a
       class="contact-social-card social-instagram"
       href="#"
       aria-label="Los Bros Landscaping on Instagram"
     >
-      <span class="social-letter">IG</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </span>
 
-      <div>
-        <h3>Instagram</h3>
-        <p>Photos and recent projects.</p>
-      </div>
+      <h3>Instagram</h3>
     </a>
 
 
-    <!-- Replace # with your Facebook link later -->
+    <!-- Replace # with your Facebook link -->
     <a
       class="contact-social-card social-facebook"
       href="#"
       aria-label="Los Bros Landscaping on Facebook"
     >
-      <span class="social-letter">f</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-facebook-f"></i>
+      </span>
 
-      <div>
-        <h3>Facebook</h3>
-        <p>Updates and local posts.</p>
-      </div>
+      <h3>Facebook</h3>
     </a>
 
 
-    <!-- Replace # with your TikTok link later -->
+    <!-- Replace # with your TikTok link -->
     <a
       class="contact-social-card social-tiktok"
       href="#"
       aria-label="Los Bros Landscaping on TikTok"
     >
-      <span class="social-letter">♪</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-tiktok"></i>
+      </span>
 
-      <div>
-        <h3>TikTok</h3>
-        <p>Short project videos.</p>
-      </div>
+      <h3>TikTok</h3>
     </a>
 
 
-    <!-- Replace # with your Google Business link later -->
+    <!-- Replace # with your Google Business link -->
     <a
       class="contact-social-card social-google"
       href="#"
       aria-label="Los Bros Landscaping Google Business Profile"
     >
-      <span class="social-letter">G</span>
+      <span class="social-icon">
+        <i class="fa-brands fa-google"></i>
+      </span>
 
-      <div>
-        <h3>Google Business</h3>
-        <p>Business information and reviews.</p>
-      </div>
+      <h3>Google Business</h3>
     </a>
 
 
-    <!-- Replace # with your Nextdoor link later -->
+    <!-- Replace # with your Nextdoor link -->
     <a
       class="contact-social-card social-nextdoor"
       href="#"
       aria-label="Los Bros Landscaping on Nextdoor"
     >
-      <span class="social-letter">N</span>
+      <span class="social-icon">
+        <i class="fa-solid fa-house-user"></i>
+      </span>
 
-      <div>
-        <h3>Nextdoor</h3>
-        <p>Local neighborhood updates.</p>
-      </div>
+      <h3>Nextdoor</h3>
     </a>
 
   </div>
@@ -784,7 +787,6 @@
      FOOTER
 ===================================================== -->
 <footer class="site-footer">
-
 
   <div class="footer-business">
 
@@ -874,8 +876,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /*
-    If someone arrives from the Service Areas page,
-    automatically place the address inside the form.
+    Automatically add an address sent from
+    the Service Areas page.
   */
   const pageParameters =
     new URLSearchParams(window.location.search);
@@ -889,9 +891,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
+  if (!quoteForm) {
+    return;
+  }
+
+
   quoteForm.addEventListener("submit", function (event) {
 
     event.preventDefault();
+
+
+    if (!quoteForm.checkValidity()) {
+      quoteForm.reportValidity();
+      return;
+    }
 
 
     const customerName =
@@ -931,13 +944,13 @@ document.addEventListener("DOMContentLoaded", function () {
 Name: ${customerName}
 Phone: ${customerPhone}
 Email: ${customerEmail || "Not provided"}
-Preferred contact: ${contactPreference}
+Best way to contact me: ${contactPreference}
 
 Service needed: ${serviceNeeded}
 Property address: ${propertyAddress}
 Property size: ${propertySize}
-Service frequency: ${serviceFrequency}
-Timing: ${jobTiming}
+Service type: ${serviceFrequency}
+Preferred timing: ${jobTiming}
 
 Job details:
 ${jobDescription}
@@ -950,11 +963,11 @@ I can attach pictures of the property to this message.`;
 
 
     /*
-      This opens the customer's text-message app with
-      your number and their quote information prepared.
+      Different SMS formatting is sometimes required
+      for Apple and Android devices.
     */
     const isAppleDevice =
-      /iPad|iPhone|iPod|Macintosh/i.test(
+      /iPhone|iPad|iPod|Macintosh/i.test(
         navigator.userAgent
       );
 
