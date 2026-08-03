@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -8,31 +10,66 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <meta
+    name="description"
+    content="View recent lawn mowing, weed pulling, mulch installation, landscaping, cleanup, irrigation, and lighting projects completed by Los Bros Landscaping."
+  >
+
   <title>Gallery | Los Bros Landscaping</title>
 
-  <link rel="stylesheet" href="style.css?v=27">
+  <link rel="stylesheet" href="style.css?v=31">
   <link rel="stylesheet" href="quote-ai.css?v=21">
+
 </head>
 
+
 <body class="gallery-body">
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
 
 <header class="navbar">
 
   <a href="index.html" class="logo-box">
+
     <img
       src="image-removebg-preview.png"
       alt="Los Bros Landscaping Logo"
     >
+
   </a>
 
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a class="active" href="gallery.html">Gallery</a>
-    <a href="reviews.html">Reviews</a>
-    <a href="areas.html">Service Areas</a>
-    <a href="contact.html">Contact</a>
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="services.html">
+      Services
+    </a>
+
+    <a class="active" href="gallery.html">
+      Gallery
+    </a>
+
+    <a href="reviews.html">
+      Reviews
+    </a>
+
+    <a href="areas.html">
+      Service Areas
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
   </nav>
+
 
   <a class="quote-btn" href="contact.html">
     Get a Free Quote
@@ -41,7 +78,10 @@
 </header>
 
 
-<!-- GALLERY HERO -->
+<!-- =====================================================
+     GALLERY HERO
+===================================================== -->
+
 <section class="gallery-hero">
 
   <div class="gallery-hero-content">
@@ -55,8 +95,8 @@
     </h1>
 
     <p>
-      Take a look at recent lawn care, landscaping,
-      cleanup, irrigation, and lighting projects.
+      Take a look at recent lawn care, mulch installation,
+      weed pulling, cleanup, irrigation, and landscaping projects.
     </p>
 
     <a href="contact.html" class="gallery-hero-btn">
@@ -68,7 +108,10 @@
 </section>
 
 
-<!-- GALLERY CONTENT -->
+<!-- =====================================================
+     GALLERY CONTENT
+===================================================== -->
+
 <main class="gallery-page">
 
   <div class="gallery-heading">
@@ -77,17 +120,25 @@
       Los Bros Landscaping
     </p>
 
-    <h2>Recent Projects</h2>
+    <h2>
+      Recent Projects
+    </h2>
 
     <p>
-      Choose a category or view all of our work.
+      Choose a category below or view all of our recent work.
     </p>
 
   </div>
 
 
-  <!-- FILTER BUTTONS -->
-  <div class="gallery-filters" aria-label="Gallery categories">
+  <!-- ===================================================
+       FILTER BUTTONS
+  ==================================================== -->
+
+  <div
+    class="gallery-filters"
+    aria-label="Gallery categories"
+  >
 
     <button
       class="gallery-filter active"
@@ -172,23 +223,30 @@
   </div>
 
 
-  <!-- GALLERY GRID -->
+  <!-- ===================================================
+       GALLERY GRID
+  ==================================================== -->
+
   <section class="masonry-gallery">
 
 
-    <!-- LAWN MOWING -->
-    <article class="gallery-item" data-category="mowing">
+    <!-- NEW LAWN MOWING PROJECT -->
+
+    <article
+      class="gallery-item"
+      data-category="mowing"
+    >
 
       <button
         class="gallery-photo"
         type="button"
-        data-full="lawn.mowing"
-        aria-label="Open lawn mowing project"
+        data-full="lawn-mowing.jpg"
+        aria-label="Open lawn mowing before and after project"
       >
 
         <img
-          src="lawn.mowing"
-          alt="Lawn mowing project"
+          src="lawn-mowing.jpg"
+          alt="Before and after lawn mowing project"
           loading="lazy"
         >
 
@@ -197,7 +255,196 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Lawn Mowing</h3>
+
+          <h3>
+            Overgrown Lawn Cleanup
+          </h3>
+
+        </div>
+
+      </button>
+
+    </article>
+
+
+    <!-- NEW MULCH PROJECT 1 -->
+
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
+
+      <button
+        class="gallery-photo"
+        type="button"
+        data-full="mulch-job-1.jpg"
+        aria-label="Open front flower bed mulch project"
+      >
+
+        <img
+          src="mulch-job-1.jpg"
+          alt="Before and after front flower bed mulch installation"
+          loading="lazy"
+        >
+
+        <span class="gallery-category">
+          Mulch
+        </span>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Front Flower Bed Mulch
+          </h3>
+
+        </div>
+
+      </button>
+
+    </article>
+
+
+    <!-- NEW MULCH PROJECT 2 -->
+
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
+
+      <button
+        class="gallery-photo"
+        type="button"
+        data-full="mulch-job-2.jpg"
+        aria-label="Open fence flower bed mulch project"
+      >
+
+        <img
+          src="mulch-job-2.jpg"
+          alt="Before and after mulch installation along a fence"
+          loading="lazy"
+        >
+
+        <span class="gallery-category">
+          Mulch
+        </span>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Fence-Line Mulch Installation
+          </h3>
+
+        </div>
+
+      </button>
+
+    </article>
+
+
+    <!-- NEW MULCH PROJECT 3 -->
+
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
+
+      <button
+        class="gallery-photo"
+        type="button"
+        data-full="mulch-job-3.jpg"
+        aria-label="Open garden bed mulch project"
+      >
+
+        <img
+          src="mulch-job-3.jpg"
+          alt="Before and after garden bed mulch installation"
+          loading="lazy"
+        >
+
+        <span class="gallery-category">
+          Mulch
+        </span>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Garden Bed Refresh
+          </h3>
+
+        </div>
+
+      </button>
+
+    </article>
+
+
+    <!-- NEW MULCH PROJECT 4 -->
+
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
+
+      <button
+        class="gallery-photo"
+        type="button"
+        data-full="mulch-job-4.jpg"
+        aria-label="Open side flower bed mulch project"
+      >
+
+        <img
+          src="mulch-job-4.jpg"
+          alt="Before and after side flower bed mulch installation"
+          loading="lazy"
+        >
+
+        <span class="gallery-category">
+          Mulch
+        </span>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Side Flower Bed Refresh
+          </h3>
+
+        </div>
+
+      </button>
+
+    </article>
+
+
+    <!-- NEW WEED PULLING PROJECT -->
+
+    <article
+      class="gallery-item"
+      data-category="weeds"
+    >
+
+      <button
+        class="gallery-photo"
+        type="button"
+        data-full="weed-pulling.jpg"
+        aria-label="Open weed pulling project"
+      >
+
+        <img
+          src="weed-pulling.jpg"
+          alt="Before and after flower bed weed pulling project"
+          loading="lazy"
+        >
+
+        <span class="gallery-category">
+          Weed Pulling
+        </span>
+
+        <div class="gallery-overlay">
+
+          <h3>
+            Flower Bed Weed Removal
+          </h3>
+
         </div>
 
       </button>
@@ -206,7 +453,11 @@
 
 
     <!-- HEDGE TRIMMING -->
-    <article class="gallery-item" data-category="trimming">
+
+    <article
+      class="gallery-item"
+      data-category="trimming"
+    >
 
       <button
         class="gallery-photo"
@@ -226,7 +477,11 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Hedge Trimming</h3>
+
+          <h3>
+            Hedge Trimming
+          </h3>
+
         </div>
 
       </button>
@@ -234,19 +489,23 @@
     </article>
 
 
-    <!-- WEED PULLING -->
-    <article class="gallery-item" data-category="weeds">
+    <!-- EXISTING WEED PULLING -->
+
+    <article
+      class="gallery-item"
+      data-category="weeds"
+    >
 
       <button
         class="gallery-photo"
         type="button"
         data-full="cleanup_before_after.jpg"
-        aria-label="Open weed pulling project"
+        aria-label="Open flower bed cleanup project"
       >
 
         <img
           src="cleanup_before_after.jpg"
-          alt="Weed pulling project"
+          alt="Flower bed cleanup and weed removal project"
           loading="lazy"
         >
 
@@ -255,7 +514,11 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Flower Bed Cleanup</h3>
+
+          <h3>
+            Flower Bed Cleanup
+          </h3>
+
         </div>
 
       </button>
@@ -264,7 +527,11 @@
 
 
     <!-- WEED CONTROL -->
-    <article class="gallery-item" data-category="weed-control">
+
+    <article
+      class="gallery-item"
+      data-category="weed-control"
+    >
 
       <button
         class="gallery-photo"
@@ -275,7 +542,7 @@
 
         <img
           src="home-bg.jpg"
-          alt="Weed control project"
+          alt="Weed control lawn project"
           loading="lazy"
         >
 
@@ -284,7 +551,11 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Weed Control</h3>
+
+          <h3>
+            Lawn Weed Control
+          </h3>
+
         </div>
 
       </button>
@@ -293,7 +564,11 @@
 
 
     <!-- YARD CLEANUP -->
-    <article class="gallery-item" data-category="cleanup">
+
+    <article
+      class="gallery-item"
+      data-category="cleanup"
+    >
 
       <button
         class="gallery-photo"
@@ -313,7 +588,11 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Yard Cleanup</h3>
+
+          <h3>
+            Yard Cleanup
+          </h3>
+
         </div>
 
       </button>
@@ -321,8 +600,12 @@
     </article>
 
 
-    <!-- MULCH -->
-    <article class="gallery-item" data-category="mulch">
+    <!-- EXISTING MULCH -->
+
+    <article
+      class="gallery-item"
+      data-category="mulch"
+    >
 
       <button
         class="gallery-photo"
@@ -333,16 +616,20 @@
 
         <img
           src="flower_bed_mulch.jpg"
-          alt="Mulch installation project"
+          alt="Flower bed mulch installation project"
           loading="lazy"
         >
 
         <span class="gallery-category">
-          Mulch Installation
+          Mulch
         </span>
 
         <div class="gallery-overlay">
-          <h3>Mulch Installation</h3>
+
+          <h3>
+            Mulch Installation
+          </h3>
+
         </div>
 
       </button>
@@ -351,7 +638,11 @@
 
 
     <!-- PLANT INSTALLATION -->
-    <article class="gallery-item" data-category="plants">
+
+    <article
+      class="gallery-item"
+      data-category="plants"
+    >
 
       <button
         class="gallery-photo"
@@ -362,16 +653,20 @@
 
         <img
           src="weed_removal.jpg"
-          alt="Plant installation project"
+          alt="Plant and flower bed project"
           loading="lazy"
         >
 
         <span class="gallery-category">
-          Plant Installation
+          Plants
         </span>
 
         <div class="gallery-overlay">
-          <h3>Plant Installation</h3>
+
+          <h3>
+            Plant Installation
+          </h3>
+
         </div>
 
       </button>
@@ -380,7 +675,11 @@
 
 
     <!-- IRRIGATION -->
-    <article class="gallery-item" data-category="irrigation">
+
+    <article
+      class="gallery-item"
+      data-category="irrigation"
+    >
 
       <button
         class="gallery-photo"
@@ -400,7 +699,11 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Irrigation System</h3>
+
+          <h3>
+            Irrigation System
+          </h3>
+
         </div>
 
       </button>
@@ -409,7 +712,11 @@
 
 
     <!-- LIGHTING -->
-    <article class="gallery-item" data-category="lighting">
+
+    <article
+      class="gallery-item"
+      data-category="lighting"
+    >
 
       <button
         class="gallery-photo"
@@ -425,11 +732,15 @@
         >
 
         <span class="gallery-category">
-          Landscape Lighting
+          Lighting
         </span>
 
         <div class="gallery-overlay">
-          <h3>Outdoor Lighting</h3>
+
+          <h3>
+            Outdoor Lighting
+          </h3>
+
         </div>
 
       </button>
@@ -438,7 +749,11 @@
 
 
     <!-- EXTRA LAWN PROJECT -->
-    <article class="gallery-item" data-category="mowing">
+
+    <article
+      class="gallery-item"
+      data-category="mowing"
+    >
 
       <button
         class="gallery-photo"
@@ -449,7 +764,7 @@
 
         <img
           src="home-bg.jpg"
-          alt="Finished lawn project"
+          alt="Finished lawn care project"
           loading="lazy"
         >
 
@@ -458,19 +773,27 @@
         </span>
 
         <div class="gallery-overlay">
-          <h3>Finished Lawn</h3>
+
+          <h3>
+            Finished Lawn
+          </h3>
+
         </div>
 
       </button>
 
     </article>
 
+
   </section>
 
 </main>
 
 
-<!-- IMAGE LIGHTBOX -->
+<!-- =====================================================
+     IMAGE LIGHTBOX
+===================================================== -->
+
 <div
   class="gallery-lightbox"
   id="galleryLightbox"
@@ -481,7 +804,7 @@
     class="lightbox-close"
     id="lightboxClose"
     type="button"
-    aria-label="Close image"
+    aria-label="Close expanded image"
   >
     ×
   </button>
@@ -489,13 +812,16 @@
   <img
     id="lightboxImage"
     src=""
-    alt="Expanded gallery project"
+    alt="Expanded landscaping project"
   >
 
 </div>
 
 
-<!-- BOTTOM CTA -->
+<!-- =====================================================
+     BOTTOM CTA
+===================================================== -->
+
 <section class="footer-cta">
 
   <div>
@@ -517,7 +843,10 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
 <footer class="site-footer">
 
   <div class="footer-business">
@@ -536,7 +865,9 @@
 
   <div>
 
-    <h3>Quick Links</h3>
+    <h3>
+      Quick Links
+    </h3>
 
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
@@ -550,13 +881,16 @@
 
   <div>
 
-    <h3>Services</h3>
+    <h3>
+      Services
+    </h3>
 
     <a href="services.html">Lawn Mowing</a>
     <a href="services.html">Weed Pulling</a>
     <a href="services.html">Weed Control</a>
     <a href="services.html">Hedge Trimming</a>
     <a href="services.html">Yard Cleanups</a>
+    <a href="services.html">Mulch Installation</a>
     <a href="services.html">Irrigation Systems</a>
     <a href="services.html">Light Installation</a>
 
@@ -565,11 +899,25 @@
 
   <div>
 
-    <h3>Contact</h3>
+    <h3>
+      Contact
+    </h3>
 
-    <p>Gadsden, Alabama</p>
-    <p>Free Estimates</p>
-    <p>Fast & Reliable</p>
+    <a href="tel:+12566385396">
+      Call: 256-638-5396
+    </a>
+
+    <a href="sms:+12566385396">
+      Send a Message
+    </a>
+
+    <p>
+      Gadsden, Alabama
+    </p>
+
+    <p>
+      Free Estimates
+    </p>
 
     <a
       class="footer-contact-btn"
@@ -583,137 +931,197 @@
 </footer>
 
 
-<!-- FILTER AND LIGHTBOX CODE -->
+<!-- =====================================================
+     FILTER AND LIGHTBOX JAVASCRIPT
+===================================================== -->
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons =
-      document.querySelectorAll(".gallery-filter");
+document.addEventListener("DOMContentLoaded", function () {
 
-    const galleryItems =
-      document.querySelectorAll(".gallery-item");
+  const filterButtons =
+    document.querySelectorAll(".gallery-filter");
+
+  const galleryItems =
+    document.querySelectorAll(".gallery-item");
 
 
-    filterButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        const selectedCategory =
-          button.getAttribute("data-filter");
+  /*
+    Filter gallery projects by category.
+  */
+  filterButtons.forEach(function (button) {
 
-        filterButtons.forEach(function (otherButton) {
-          otherButton.classList.remove("active");
-        });
+    button.addEventListener("click", function () {
 
-        button.classList.add("active");
+      const selectedCategory =
+        button.getAttribute("data-filter");
 
-        galleryItems.forEach(function (item) {
-          const itemCategory =
-            item.getAttribute("data-category");
 
-          const shouldShow =
-            selectedCategory === "all" ||
-            itemCategory === selectedCategory;
-
-          item.classList.toggle(
-            "gallery-hidden",
-            !shouldShow
-          );
-        });
+      filterButtons.forEach(function (otherButton) {
+        otherButton.classList.remove("active");
       });
+
+
+      button.classList.add("active");
+
+
+      galleryItems.forEach(function (item) {
+
+        const itemCategory =
+          item.getAttribute("data-category");
+
+
+        const shouldShow =
+          selectedCategory === "all" ||
+          itemCategory === selectedCategory;
+
+
+        item.classList.toggle(
+          "gallery-hidden",
+          !shouldShow
+        );
+
+      });
+
     });
 
-
-    const lightbox =
-      document.getElementById("galleryLightbox");
-
-    const lightboxImage =
-      document.getElementById("lightboxImage");
-
-    const closeButton =
-      document.getElementById("lightboxClose");
-
-    const galleryPhotos =
-      document.querySelectorAll(".gallery-photo");
+  });
 
 
-    function openLightbox(photo) {
-      if (!lightbox || !lightboxImage) {
-        return;
-      }
+  /*
+    Image lightbox.
+  */
+  const lightbox =
+    document.getElementById("galleryLightbox");
 
-      const image = photo.querySelector("img");
+  const lightboxImage =
+    document.getElementById("lightboxImage");
 
-      const fullImage =
-        photo.getAttribute("data-full") ||
-        image?.getAttribute("src");
+  const closeButton =
+    document.getElementById("lightboxClose");
 
-      if (!fullImage) {
-        return;
-      }
+  const galleryPhotos =
+    document.querySelectorAll(".gallery-photo");
 
-      lightboxImage.src = fullImage;
 
-      lightboxImage.alt =
-        image?.getAttribute("alt") ||
-        "Gallery project";
+  function openLightbox(photo) {
 
-      lightbox.classList.add("open");
-      lightbox.setAttribute("aria-hidden", "false");
-
-      document.body.style.overflow = "hidden";
+    if (!lightbox || !lightboxImage) {
+      return;
     }
 
 
-    function closeLightbox() {
-      if (!lightbox || !lightboxImage) {
-        return;
-      }
+    const image =
+      photo.querySelector("img");
 
-      lightbox.classList.remove("open");
-      lightbox.setAttribute("aria-hidden", "true");
 
-      lightboxImage.src = "";
+    const fullImage =
+      photo.getAttribute("data-full") ||
+      image?.getAttribute("src");
 
-      document.body.style.overflow = "";
+
+    if (!fullImage) {
+      return;
     }
 
 
-    galleryPhotos.forEach(function (photo) {
-      photo.addEventListener("click", function () {
-        openLightbox(photo);
-      });
+    lightboxImage.src = fullImage;
+
+
+    lightboxImage.alt =
+      image?.getAttribute("alt") ||
+      "Expanded landscaping project";
+
+
+    lightbox.classList.add("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "false"
+    );
+
+
+    document.body.style.overflow = "hidden";
+
+  }
+
+
+  function closeLightbox() {
+
+    if (!lightbox || !lightboxImage) {
+      return;
+    }
+
+
+    lightbox.classList.remove("open");
+
+    lightbox.setAttribute(
+      "aria-hidden",
+      "true"
+    );
+
+
+    lightboxImage.src = "";
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  galleryPhotos.forEach(function (photo) {
+
+    photo.addEventListener("click", function () {
+      openLightbox(photo);
     });
 
-
-    if (closeButton) {
-      closeButton.addEventListener(
-        "click",
-        closeLightbox
-      );
-    }
+  });
 
 
-    if (lightbox) {
-      lightbox.addEventListener(
-        "click",
-        function (event) {
-          if (event.target === lightbox) {
-            closeLightbox();
-          }
-        }
-      );
-    }
+  if (closeButton) {
+
+    closeButton.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+  }
 
 
-    document.addEventListener(
-      "keydown",
+  if (lightbox) {
+
+    lightbox.addEventListener(
+      "click",
       function (event) {
-        if (event.key === "Escape") {
+
+        if (event.target === lightbox) {
           closeLightbox();
         }
+
       }
     );
-  });
+
+  }
+
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key === "Escape" &&
+        lightbox?.classList.contains("open")
+      ) {
+        closeLightbox();
+      }
+
+    }
+  );
+
+});
 </script>
 
-  <script src="quote-ai.js?v=21"></script>
+
+<script src="quote-ai.js?v=21"></script>
+
 </body>
+
 </html>
