@@ -5322,3 +5322,182 @@ a{
     grid-template-columns:1fr;
   }
 }
+/* =========================================================
+   HOME PAGE FREE QUOTE POPUP
+========================================================= */
+
+.home-quote-popup{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:22px;
+
+  background:rgba(0,0,0,.62);
+
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+
+  transition:
+    opacity .25s ease,
+    visibility .25s ease;
+}
+
+.home-quote-popup.show{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.home-quote-popup-box{
+  position:relative;
+
+  width:min(480px,100%);
+  padding:42px 34px 34px;
+
+  color:#fff;
+  text-align:center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #0d4b2b,
+      #062515
+    );
+
+  border:1px solid rgba(255,255,255,.20);
+  border-radius:12px;
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.52),
+    inset 0 1px 0 rgba(255,255,255,.10);
+
+  transform:translateY(20px) scale(.97);
+
+  transition:transform .25s ease;
+}
+
+.home-quote-popup.show .home-quote-popup-box{
+  transform:translateY(0) scale(1);
+}
+
+.home-quote-popup-close{
+  position:absolute;
+  top:12px;
+  left:12px;
+
+  width:40px;
+  height:40px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  color:#fff;
+  background:rgba(255,255,255,.10);
+
+  border:1px solid rgba(255,255,255,.24);
+  border-radius:50%;
+
+  cursor:pointer;
+
+  font-size:28px;
+  line-height:1;
+}
+
+.home-quote-popup-close:hover{
+  color:#8cff1a;
+  background:rgba(255,255,255,.17);
+}
+
+.home-quote-popup-kicker{
+  margin-bottom:10px;
+
+  color:#8cff1a;
+
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+.home-quote-popup-box h2{
+  color:#fff;
+
+  font-size:clamp(30px,5vw,42px);
+  line-height:1.05;
+  text-transform:uppercase;
+}
+
+.home-quote-popup-text{
+  max-width:370px;
+  margin:17px auto 25px;
+
+  color:#d8e5d4;
+
+  font-size:16px;
+  line-height:1.5;
+}
+
+.home-quote-popup-button{
+  width:100%;
+  min-height:56px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px 20px;
+
+  color:#fff;
+  background:#62b532;
+
+  border:1px solid #8cff1a;
+  border-radius:3px;
+
+  text-decoration:none;
+  text-transform:uppercase;
+
+  font-size:14px;
+  font-weight:900;
+
+  box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+  transition:
+    transform .18s ease,
+    background .18s ease;
+}
+
+.home-quote-popup-button:hover{
+  background:#70c33c;
+  transform:translateY(-2px);
+}
+
+@media(max-width:560px){
+
+  .home-quote-popup{
+    padding:17px;
+  }
+
+  .home-quote-popup-box{
+    padding:43px 22px 25px;
+    border-radius:10px;
+  }
+
+  .home-quote-popup-box h2{
+    font-size:32px;
+  }
+
+  .home-quote-popup-text{
+    font-size:15px;
+  }
+
+  .home-quote-popup-button{
+    min-height:54px;
+  }
+}
