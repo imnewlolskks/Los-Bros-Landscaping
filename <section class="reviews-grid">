@@ -91,21 +91,22 @@
         These reviews were shared by real customers after
         working with Los Bros Landscaping.
       </p>
+<div class="review-summary">
 
-      <div class="review-summary">
+    <div>
+        <strong>5.0</strong>
+        <span>Google Rating</span>
+    </div>
 
-        <div>
-          <strong>5.0</strong>
-          <span>Current Google Rating</span>
-        </div>
+    <div>
+        <strong>★★★★★</strong>
+        <span>5 Verified Reviews</span>
+    </div>
 
-        <div>
-          <strong>★★★★★</strong>
-          <span>Three 5-Star Reviews</span>
-        </div>
+</div>
+     
 
-      </div>
-
+    
       <a
         href="https://www.google.com/search?client=safari&hs=sybV&sca_esv=3091aafe0b9f6d1a&hl=en-us&q=los+bros+landscaping+reviews&uds=AJ5uw1_yD9MuQoRH4Q8BOFnFGOdnn06uVMBBNW7-dKaj6YD8Rtkg0xYce6RvsVZYi78i_bqckPNGJw6HUhkqABSJRcPA64rFDw26oI9jQEziPXY4zNoeewn9PCgkRztPifIwnNVyKYLobZeJP6_0YxQPlONIUhMzSjqQ9yQbbazOvWPkuU-C4xkZTAUICZr1XBy4MGYLDbBrOFSjkM805OzzPqisNbp0565Yh-F50rU1flUWXNnT_QCucox4QAFWAnw8nHNbzEGtVpSW23_4mtsjf8leolNlF7r-UApEfWUvotW0Ra-TZVaOzM_FjpNm6aaJvqt65DrqPJ5Fhqg34zki1ca30VK_S1nR6gHz6L7aM7_6XPqJdm-tDE4Fvr-9xTSKVhHGgoAKy-cgn3fqCwPUXTc3ccOjhSTw4Dq8zVYOZ0OaLQepT5qJrugU9nRb5351bXXNbTZOrIBkAo5F3OBXifOLpS1ReA&si=APenkKm7iecQ4G6P-TsbSMFKIQtv3EFIqRAFw-i8uEbk55Z-_9T3DyuFp8pBjCo_8Z3yPLXdskyU7PLQmvHnitZVs5P-XZLgNQczPmH7_bbMUFVEaEVhNYNb6-P0jcjiKrP7-rN4fV11I2I1PHkGRRZjJbmJrY6OEw%3D%3D&sa=X&ved=2ahUKEwii2dv_l9uVAxUSjIkEHVHNK-oQk8gLegQIHBAB&ictx=1&biw=462&bih=864&dpr=3"
         class="reviews-intro-btn"
@@ -122,88 +123,143 @@
     <section class="reviews-grid">
 
 
-      <!-- HEATHER REVIEW -->
-      <article class="customer-review-card">
+     <section class="reviews-grid">
 
-        <div class="customer-review-stars">
-          ★★★★★
-        </div>
+<!-- Alnita -->
 
-        <p>
-          Hired them temporarily to do my lawn as I just moved
-          here from Tennessee until I got my lawnmower and they
-          did a fabulous job.
-        </p>
+<article class="customer-review-card">
 
-        <div class="customer-review-person">
+<div class="customer-review-stars">
+★★★★★
+</div>
 
-          <div class="customer-review-avatar">
-            H
-          </div>
+<p>
+My yard was landscaped in a professional and timely manner.
+I will give Juan two thumbs up. Thanks again!
+</p>
 
-          <div>
-            <h3>Heather Stewart</h3>
-            <span>Google Review</span>
-          </div>
+<div class="customer-review-person">
 
-        </div>
+<div class="customer-review-avatar purple">
+A
+</div>
 
-      </article>
+<div>
+<h3>Alnita Mitchell</h3>
+<span>Google Local Guide</span>
+</div>
 
+</div>
 
-      <!-- ELY REVIEW -->
-      <article class="customer-review-card">
+</article>
 
-        <div class="customer-review-stars">
-          ★★★★★
-        </div>
+<!-- BrosellerX -->
 
-        <p>
-          Made my grass good looking with stripes.
-        </p>
+<article class="customer-review-card">
 
-        <div class="customer-review-person">
+<div class="customer-review-stars">
+★★★★★
+</div>
 
-          <div class="customer-review-avatar">
-            E
-          </div>
+<p>
+Only charged me $50 + $10 and made my lawn stripes look better.
+Great price.
+</p>
 
-          <div>
-            <h3>Ely Dominguez</h3>
-            <span>Google Review</span>
-          </div>
+<div class="customer-review-person">
 
-        </div>
+<div class="customer-review-avatar yellow">
+B
+</div>
 
-      </article>
+<div>
+<h3>BrosellerX</h3>
+<span>Google Review</span>
+</div>
 
+</div>
 
-      <!-- JOSE REVIEW -->
-      <article class="customer-review-card">
+</article>
 
-        <div class="customer-review-stars">
-          ★★★★★
-        </div>
+<!-- Heather -->
 
-        <p>
-          Five-star rating left for Los Bros Landscaping.
-        </p>
+<article class="customer-review-card">
 
-        <div class="customer-review-person">
+<div class="customer-review-stars">
+★★★★★
+</div>
 
-          <div class="customer-review-avatar">
-            J
-          </div>
+<p>
+Hired them temporarily to do my lawn as I just moved here from Tennessee until I got my lawn mower and they did a fabulous job.
+</p>
 
-          <div>
-            <h3>Jose Mondragon</h3>
-            <span>Google Review</span>
-          </div>
+<div class="customer-review-person">
 
-        </div>
+<div class="customer-review-avatar green">
+H
+</div>
 
-      </article>
+<div>
+<h3>Heather Stewart</h3>
+<span>Google Review</span>
+</div>
 
+</div>
+
+</article>
+
+<!-- Jose -->
+
+<article class="customer-review-card">
+
+<div class="customer-review-stars">
+★★★★★
+</div>
+
+<p>
+★★★★★
+</p>
+
+<div class="customer-review-person">
+
+<div class="customer-review-avatar darkgreen">
+J
+</div>
+
+<div>
+<h3>Jose Mondragon</h3>
+<span>Google Review</span>
+</div>
+
+</div>
+
+</article>
+
+<!-- Leave Review -->
+
+<article class="leave-review-card reviews-leave-wide">
+
+<div class="leave-review-icon">
+★
+</div>
+
+<h3>
+Worked With Us?
+</h3>
+
+<p>
+Share your experience and help other local homeowners discover Los Bros Landscaping.
+</p>
+
+<a
+href="YOUR GOOGLE REVIEW LINK"
+target="_blank">
+Leave Your Feedback
+</a>
+
+</article>
+
+</section>
 
       <!-- GOOGLE REVIEW CTA -->
       <article class="leave-review-card reviews-leave-wide">
