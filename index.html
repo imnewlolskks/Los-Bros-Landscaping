@@ -143,6 +143,78 @@
 
 </footer>
 <script src="script.js"></script>
+<script src="quote-ai.js?v=21"></script>
+
+<!-- FREE QUOTE POPUP -->
+<div class="home-quote-popup" id="homeQuotePopup">
+
+  <div class="home-quote-popup-box">
+
+    <button
+      class="home-quote-popup-close"
+      id="homeQuotePopupClose"
+      type="button"
+      aria-label="Close popup"
+    >
+      ×
+    </button>
+
+    <p class="home-quote-popup-kicker">
+      Los Bros Landscaping
+    </p>
+
+    <h2>Need Yard Work?</h2>
+
+    <p class="home-quote-popup-text">
+      Tell us what you need and receive a free, fair estimate.
+    </p>
+
+    <a
+      href="contact.html"
+      class="home-quote-popup-button"
+    >
+      Get a Free Quote
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("homeQuotePopup");
+    const closeButton = document.getElementById("homeQuotePopupClose");
+
+    if (!popup || !closeButton) {
+      return;
+    }
+
+    setTimeout(function () {
+      popup.classList.add("show");
+    }, 1200);
+
+    function closeQuotePopup() {
+      popup.classList.remove("show");
+    }
+
+    closeButton.addEventListener("click", closeQuotePopup);
+
+    popup.addEventListener("click", function (event) {
+      if (event.target === popup) {
+        closeQuotePopup();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeQuotePopup();
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
  </body>
 </html>
  
