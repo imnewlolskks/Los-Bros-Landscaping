@@ -915,9 +915,14 @@ a{
 .before-after-box{
   position:relative;
 
+  width:100%;
+  aspect-ratio:1 / 1;
+
   margin-top:22px;
 
   border-radius:7px;
+
+  background:#e8eee3;
 
   box-shadow:0 15px 36px rgba(0,0,0,.15);
 
@@ -928,14 +933,16 @@ a{
   display:block;
 
   width:100%;
-  height:340px;
+  height:100%;
 
   object-fit:cover;
+  object-position:center;
 }
 
 .before-label,
 .after-label{
   position:absolute;
+  z-index:2;
   bottom:18px;
 
   padding:8px 13px;
@@ -1224,8 +1231,12 @@ a{
 
   .proof-section{
     grid-template-columns:1fr;
-
     padding:15px 5% 70px;
+  }
+
+  .before-after-box{
+    width:100%;
+    aspect-ratio:1 / 1;
   }
 
   .footer-cta{
@@ -1470,8 +1481,17 @@ a{
     gap:38px;
   }
 
+  .before-after-box{
+    width:100%;
+    aspect-ratio:1 / 1;
+  }
+
   .before-after-box img{
-    height:250px;
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    object-position:center;
   }
 
   .review-card{
@@ -1520,6 +1540,11 @@ a{
 
   .trust-bar{
     grid-template-columns:1fr;
+  }
+
+  .before-after-box{
+    width:100%;
+    aspect-ratio:1 / 1;
   }
 }
 
