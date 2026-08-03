@@ -5323,10 +5323,14 @@ a{
   }
 }
 /* =========================================================
-   HOME PAGE FREE QUOTE POPUP
+   INDEX PAGE FREE QUOTE POPUP
 ========================================================= */
 
-.home-quote-popup{
+body.quote-popup-open{
+  overflow:hidden;
+}
+
+.quote-popup-overlay{
   position:fixed;
   inset:0;
   z-index:10000;
@@ -5335,169 +5339,425 @@ a{
   align-items:center;
   justify-content:center;
 
-  padding:22px;
+  padding:24px;
 
-  background:rgba(0,0,0,.62);
+  background:rgba(0,0,0,.76);
 
   opacity:0;
   visibility:hidden;
   pointer-events:none;
 
   transition:
-    opacity .25s ease,
-    visibility .25s ease;
+    opacity .22s ease,
+    visibility .22s ease;
 }
 
-.home-quote-popup.show{
+.quote-popup-overlay.quote-popup-visible{
   opacity:1;
   visibility:visible;
   pointer-events:auto;
 }
 
-.home-quote-popup-box{
+.quote-popup-card{
   position:relative;
 
-  width:min(480px,100%);
-  padding:42px 34px 34px;
+  width:min(760px,100%);
+  max-height:calc(100vh - 48px);
 
-  color:#fff;
-  text-align:center;
+  padding:36px;
 
-  background:
-    linear-gradient(
-      145deg,
-      #0d4b2b,
-      #062515
-    );
+  color:#101810;
+  background:#ffffff;
 
-  border:1px solid rgba(255,255,255,.20);
-  border-radius:12px;
+  border:1px solid rgba(35,75,35,.14);
+  border-radius:10px;
 
   box-shadow:
-    0 25px 70px rgba(0,0,0,.52),
-    inset 0 1px 0 rgba(255,255,255,.10);
+    0 30px 80px rgba(0,0,0,.48),
+    0 5px 18px rgba(0,0,0,.18);
 
-  transform:translateY(20px) scale(.97);
+  overflow-y:auto;
 
-  transition:transform .25s ease;
+  transform:translateY(18px) scale(.98);
+
+  transition:transform .22s ease;
 }
 
-.home-quote-popup.show .home-quote-popup-box{
+.quote-popup-visible .quote-popup-card{
   transform:translateY(0) scale(1);
 }
 
-.home-quote-popup-close{
-  position:absolute;
-  top:12px;
-  left:12px;
 
-  width:40px;
-  height:40px;
+/* CLOSE BUTTON */
+
+.quote-popup-close{
+  position:absolute;
+  top:15px;
+  left:15px;
+  z-index:2;
+
+  width:42px;
+  height:42px;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  color:#fff;
-  background:rgba(255,255,255,.10);
+  padding:0;
 
-  border:1px solid rgba(255,255,255,.24);
+  color:#ffffff;
+  background:#0b4728;
+
+  border:1px solid #06391f;
   border-radius:50%;
 
   cursor:pointer;
 
-  font-size:28px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:29px;
+  font-weight:400;
   line-height:1;
+
+  box-shadow:0 5px 13px rgba(0,0,0,.18);
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
 }
 
-.home-quote-popup-close:hover{
-  color:#8cff1a;
-  background:rgba(255,255,255,.17);
+.quote-popup-close:hover{
+  background:#62b532;
+  transform:scale(1.06);
 }
 
-.home-quote-popup-kicker{
-  margin-bottom:10px;
 
-  color:#8cff1a;
+/* HEADING */
 
-  font-size:13px;
+.quote-popup-heading{
+  padding:13px 35px 25px;
+
+  text-align:center;
+
+  border-bottom:1px solid rgba(25,65,25,.12);
+}
+
+.quote-popup-heading > p{
+  margin-bottom:7px;
+
+  color:#5ca62d;
+
+  font-size:12px;
   font-weight:900;
-  letter-spacing:1.2px;
+  letter-spacing:1.4px;
   text-transform:uppercase;
 }
 
-.home-quote-popup-box h2{
-  color:#fff;
+.quote-popup-heading h2{
+  color:#102015;
 
-  font-size:clamp(30px,5vw,42px);
-  line-height:1.05;
+  font-size:clamp(31px,5vw,47px);
+  font-weight:900;
+  line-height:1;
   text-transform:uppercase;
 }
 
-.home-quote-popup-text{
-  max-width:370px;
-  margin:17px auto 25px;
+.quote-popup-heading span{
+  display:block;
 
-  color:#d8e5d4;
+  max-width:590px;
+  margin:13px auto 0;
 
-  font-size:16px;
+  color:#596659;
+
+  font-size:15px;
   line-height:1.5;
 }
 
-.home-quote-popup-button{
+
+/* FORM */
+
+.quote-popup-form{
+  padding-top:26px;
+}
+
+.quote-popup-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+
+.quote-popup-field{
+  min-width:0;
+}
+
+.quote-popup-full{
+  grid-column:1 / -1;
+}
+
+.quote-popup-field label{
+  display:block;
+
+  margin-bottom:8px;
+
+  color:#1b281d;
+
+  font-size:13px;
+  font-weight:800;
+  line-height:1.3;
+}
+
+.quote-popup-field label strong{
+  color:#58a524;
+}
+
+.quote-popup-field input,
+.quote-popup-field select,
+.quote-popup-field textarea{
+  display:block;
+
   width:100%;
-  min-height:56px;
+
+  color:#172117;
+  background:#f6f8f4;
+
+  border:1px solid rgba(36,74,36,.20);
+  border-radius:5px;
+
+  outline:none;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+
+  transition:
+    border-color .18s ease,
+    background .18s ease,
+    box-shadow .18s ease;
+}
+
+.quote-popup-field input,
+.quote-popup-field select{
+  min-height:52px;
+  padding:12px 14px;
+}
+
+.quote-popup-field textarea{
+  min-height:125px;
+
+  padding:14px;
+
+  line-height:1.5;
+  resize:vertical;
+}
+
+.quote-popup-field input::placeholder,
+.quote-popup-field textarea::placeholder{
+  color:#879187;
+}
+
+.quote-popup-field input:focus,
+.quote-popup-field select:focus,
+.quote-popup-field textarea:focus{
+  background:#ffffff;
+  border-color:#62b532;
+
+  box-shadow:0 0 0 3px rgba(98,181,50,.14);
+}
+
+
+/* SUBMIT BUTTON */
+
+.quote-popup-submit{
+  width:100%;
+  min-height:58px;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  padding:14px 20px;
+  margin-top:22px;
+  padding:15px 20px;
 
-  color:#fff;
+  color:#ffffff;
   background:#62b532;
 
-  border:1px solid #8cff1a;
+  border:1px solid #3d811d;
   border-radius:3px;
 
-  text-decoration:none;
+  cursor:pointer;
+
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.2px;
+  line-height:1.2;
   text-transform:uppercase;
 
-  font-size:14px;
-  font-weight:900;
-
-  box-shadow:0 8px 20px rgba(0,0,0,.25);
+  box-shadow:
+    0 7px 18px rgba(46,105,17,.28),
+    inset 0 1px 0 rgba(255,255,255,.18);
 
   transition:
+    background .18s ease,
     transform .18s ease,
-    background .18s ease;
+    box-shadow .18s ease;
 }
 
-.home-quote-popup-button:hover{
+.quote-popup-submit:hover{
   background:#70c33c;
+
   transform:translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(46,105,17,.33),
+    inset 0 1px 0 rgba(255,255,255,.18);
 }
 
-@media(max-width:560px){
+.quote-popup-submit:active{
+  background:#438d20;
+  transform:translateY(0);
+}
 
-  .home-quote-popup{
-    padding:17px;
+.quote-popup-note{
+  max-width:630px;
+
+  margin:13px auto 0;
+
+  color:#6a756a;
+
+  text-align:center;
+
+  font-size:12px;
+  line-height:1.5;
+}
+
+
+/* =========================================================
+   POPUP TABLETS
+========================================================= */
+
+@media(max-width:800px){
+
+  .quote-popup-overlay{
+    padding:18px;
   }
 
-  .home-quote-popup-box{
-    padding:43px 22px 25px;
-    border-radius:10px;
+  .quote-popup-card{
+    max-height:calc(100vh - 36px);
+    padding:31px 25px 27px;
   }
 
-  .home-quote-popup-box h2{
+  .quote-popup-heading{
+    padding-left:34px;
+    padding-right:34px;
+  }
+}
+
+
+/* =========================================================
+   POPUP PHONES
+========================================================= */
+
+@media(max-width:600px){
+
+  .quote-popup-overlay{
+    align-items:flex-end;
+
+    padding:0;
+  }
+
+  .quote-popup-card{
+    width:100%;
+    max-height:92vh;
+
+    padding:29px 18px 23px;
+
+    border-radius:15px 15px 0 0;
+
+    transform:translateY(40px);
+  }
+
+  .quote-popup-visible .quote-popup-card{
+    transform:translateY(0);
+  }
+
+  .quote-popup-close{
+    top:13px;
+    left:13px;
+
+    width:39px;
+    height:39px;
+
+    font-size:27px;
+  }
+
+  .quote-popup-heading{
+    padding:13px 18px 22px;
+  }
+
+  .quote-popup-heading h2{
     font-size:32px;
   }
 
-  .home-quote-popup-text{
-    font-size:15px;
+  .quote-popup-heading span{
+    font-size:14px;
   }
 
-  .home-quote-popup-button{
+  .quote-popup-grid{
+    grid-template-columns:1fr;
+    gap:15px;
+  }
+
+  .quote-popup-full{
+    grid-column:auto;
+  }
+
+  .quote-popup-field input,
+  .quote-popup-field select{
     min-height:54px;
+  }
+
+  .quote-popup-field textarea{
+    min-height:115px;
+  }
+
+  .quote-popup-submit{
+    min-height:57px;
+
+    font-size:14px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+  .quote-popup-card{
+    padding-left:14px;
+    padding-right:14px;
+  }
+
+  .quote-popup-heading{
+    padding-left:25px;
+    padding-right:25px;
+  }
+
+  .quote-popup-heading h2{
+    font-size:29px;
+  }
+}
+
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+  .quote-popup-overlay,
+  .quote-popup-card,
+  .quote-popup-close,
+  .quote-popup-submit{
+    transition:none !important;
   }
 }
