@@ -142,79 +142,292 @@
   </div>
 
 </footer>
-<script src="script.js"></script>
-<script src="quote-ai.js?v=21"></script>
+<!-- =====================================================
+     HOME PAGE FREE QUOTE POPUP
+     Put this before </body> in index.html only
+====================================================== -->
 
-<!-- FREE QUOTE POPUP -->
-<div class="home-quote-popup" id="homeQuotePopup">
-
-  <div class="home-quote-popup-box">
+<div
+  class="quote-popup-overlay"
+  id="quotePopup"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="quotePopupTitle"
+  aria-hidden="true"
+>
+  <div class="quote-popup-card">
 
     <button
-      class="home-quote-popup-close"
-      id="homeQuotePopupClose"
+      class="quote-popup-close"
+      id="quotePopupClose"
       type="button"
-      aria-label="Close popup"
+      aria-label="Close free quote form"
     >
       ×
     </button>
 
-    <p class="home-quote-popup-kicker">
-      Los Bros Landscaping
-    </p>
+    <div class="quote-popup-heading">
+      <p>Los Bros Landscaping</p>
 
-    <h2>Need Yard Work?</h2>
+      <h2 id="quotePopupTitle">
+        Get a Free Quote
+      </h2>
 
-    <p class="home-quote-popup-text">
-      Tell us what you need and receive a free, fair estimate.
-    </p>
+      <span>
+        Tell us about the work you need. Your information will
+        be placed into a text message to Los Bros Landscaping.
+      </span>
+    </div>
 
-    <a
-      href="contact.html"
-      class="home-quote-popup-button"
-    >
-      Get a Free Quote
-    </a>
+    <form id="homeQuoteForm" class="quote-popup-form">
+
+      <div class="quote-popup-grid">
+
+        <div class="quote-popup-field">
+          <label for="quoteName">
+            Full Name <strong>*</strong>
+          </label>
+
+          <input
+            id="quoteName"
+            name="name"
+            type="text"
+            placeholder="Your full name"
+            autocomplete="name"
+            required
+          >
+        </div>
+
+        <div class="quote-popup-field">
+          <label for="quotePhone">
+            Phone Number <strong>*</strong>
+          </label>
+
+          <input
+            id="quotePhone"
+            name="phone"
+            type="tel"
+            placeholder="256-000-0000"
+            autocomplete="tel"
+            required
+          >
+        </div>
+
+        <div class="quote-popup-field quote-popup-full">
+          <label for="quoteAddress">
+            Property Address or Area <strong>*</strong>
+          </label>
+
+          <input
+            id="quoteAddress"
+            name="address"
+            type="text"
+            placeholder="Street address, city, or neighborhood"
+            autocomplete="street-address"
+            required
+          >
+        </div>
+
+        <div class="quote-popup-field">
+          <label for="quoteService">
+            Service Needed <strong>*</strong>
+          </label>
+
+          <select
+            id="quoteService"
+            name="service"
+            required
+          >
+            <option value="" selected disabled>
+              Choose a service
+            </option>
+
+            <option value="Lawn Mowing">
+              Lawn Mowing
+            </option>
+
+            <option value="Hedge Trimming">
+              Hedge Trimming
+            </option>
+
+            <option value="Weed Pulling">
+              Weed Pulling
+            </option>
+
+            <option value="Weed Control">
+              Weed Control
+            </option>
+
+            <option value="Mulch Installation">
+              Mulch Installation
+            </option>
+
+            <option value="Yard Cleanup">
+              Yard Cleanup
+            </option>
+
+            <option value="Irrigation">
+              Irrigation
+            </option>
+
+            <option value="Landscape Lighting">
+              Landscape Lighting
+            </option>
+
+            <option value="Other Landscaping Work">
+              Other Landscaping Work
+            </option>
+          </select>
+        </div>
+
+        <div class="quote-popup-field">
+          <label for="quoteTiming">
+            When Do You Need It?
+          </label>
+
+          <select
+            id="quoteTiming"
+            name="timing"
+          >
+            <option value="As soon as possible">
+              As soon as possible
+            </option>
+
+            <option value="Within one week">
+              Within one week
+            </option>
+
+            <option value="Within two weeks">
+              Within two weeks
+            </option>
+
+            <option value="Sometime this month">
+              Sometime this month
+            </option>
+
+            <option value="I am flexible">
+              I am flexible
+            </option>
+          </select>
+        </div>
+
+        <div class="quote-popup-field quote-popup-full">
+          <label for="quoteDetails">
+            Job Details <strong>*</strong>
+          </label>
+
+          <textarea
+            id="quoteDetails"
+            name="details"
+            placeholder="Describe the yard, approximate size, amount of work, and anything else we should know."
+            required
+          ></textarea>
+        </div>
+
+      </div>
+
+      <button
+        class="quote-popup-submit"
+        type="submit"
+      >
+        Request My Free Quote
+      </button>
+
+      <p class="quote-popup-note">
+        After pressing the button, your Messages app will open
+        with the quote information already written. Press Send
+        to deliver it to 256-638-5396.
+      </p>
+
+    </form>
 
   </div>
-
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("homeQuotePopup");
-    const closeButton = document.getElementById("homeQuotePopupClose");
 
-    if (!popup || !closeButton) {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const popup = document.getElementById("quotePopup");
+  const closeButton = document.getElementById("quotePopupClose");
+  const quoteForm = document.getElementById("homeQuoteForm");
+
+  if (!popup || !closeButton || !quoteForm) {
+    return;
+  }
+
+  function openQuotePopup() {
+    popup.classList.add("quote-popup-visible");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.classList.add("quote-popup-open");
+  }
+
+  function closeQuotePopup() {
+    popup.classList.remove("quote-popup-visible");
+    popup.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("quote-popup-open");
+  }
+
+  /*
+    The popup appears every time index.html loads.
+    It does not save a cookie or localStorage setting.
+  */
+  window.setTimeout(openQuotePopup, 900);
+
+  closeButton.addEventListener("click", closeQuotePopup);
+
+  popup.addEventListener("click", function (event) {
+    if (event.target === popup) {
+      closeQuotePopup();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (
+      event.key === "Escape" &&
+      popup.classList.contains("quote-popup-visible")
+    ) {
+      closeQuotePopup();
+    }
+  });
+
+  quoteForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!quoteForm.checkValidity()) {
+      quoteForm.reportValidity();
       return;
     }
 
-    setTimeout(function () {
-      popup.classList.add("show");
-    }, 1200);
+    const name = document.getElementById("quoteName").value.trim();
+    const phone = document.getElementById("quotePhone").value.trim();
+    const address = document.getElementById("quoteAddress").value.trim();
+    const service = document.getElementById("quoteService").value;
+    const timing = document.getElementById("quoteTiming").value;
+    const details = document.getElementById("quoteDetails").value.trim();
 
-    function closeQuotePopup() {
-      popup.classList.remove("show");
-    }
+    const message =
+`Hi Los Bros Landscaping, I would like a free quote.
 
-    closeButton.addEventListener("click", closeQuotePopup);
+Name: ${name}
+Phone: ${phone}
+Address/Area: ${address}
+Service Needed: ${service}
+Preferred Timing: ${timing}
 
-    popup.addEventListener("click", function (event) {
-      if (event.target === popup) {
-        closeQuotePopup();
-      }
-    });
+Job Details:
+${details}`;
 
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeQuotePopup();
-      }
-    });
+    const encodedMessage = encodeURIComponent(message);
+
+    /*
+      Opens the customer's Messages app with your number
+      and all form information already entered.
+    */
+    window.location.href =
+      "sms:+12566385396?body=" + encodedMessage;
   });
+});
 </script>
-
-</body>
-</html>
  </body>
 </html>
  
